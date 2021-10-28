@@ -1,0 +1,33 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title TrainingClub
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+    %link{href: "https://use.fontawesome.com/releases/v5.6.1/css/all.css", rel: "stylesheet"}/
+  %body
+    %header.header 
+      .header_icon
+        =link_to image_tag("logo.png", class: "image"), root_path
+      .header_content 
+        %ul 
+          %li.nav-item-active
+            %i.fas.fa-user
+              = link_to 'マイページ'
+          %li.nav-item-active
+            %i.far.fa-calendar-check
+              = link_to '今日のTraining'
+          %li.nav-item-active
+            %i.far.fa-comments
+              = link_to 'みんなのTraining'
+          %li.nav-item-active    
+            %i.fas.fa-sign-out-alt
+              = link_to 'ログアウト'
+      
+  
+  = yield

@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid;
+  padding: 15px 10px;
+}
+.header_content {
+    padding-right:10px;
+}
+.nav-item-active {
+        margin-top: 5px;
+        padding-left: 30px;
+        overflow: hidden;
+        float: left;
+        font-size: 18px;
+}
