@@ -3,9 +3,20 @@
   justify-content: space-between;
   border-bottom: 1px solid;
   padding: 15px 10px;
+  
+  li {
+    text-decoration: none;
+  }
+  img {
+    cursor: pointer;
+    width: 140px;
+    height: 40px;
+    padding-top: 7px;
+  }
 }
 .header_content {
-    padding-right:10px;
+    padding-right:10px; 
+    padding-bottom:5px;
 }
 .nav-item-active {
         margin-top: 5px;
