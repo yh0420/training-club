@@ -1,1 +1,16 @@
-さ
+.container
+  .top_wrapper
+    .top_image
+      =image_tag 'app_logo.png'
+      =image_tag 'undraw_fitness_tracker.png', class: 'right-image'
+    .top_text
+      %p 筋トレを継続したいあなたに
+    .top_button
+      .button-guest
+        = link_to 'ゲストログイン', class: 'btn login-btn'
+      .button-signin
+        = link_to '登録して始める', class: 'login-btn'
+
+
+        
+

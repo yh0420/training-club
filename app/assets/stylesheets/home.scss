@@ -1,0 +1,81 @@
+.top_wrapper {
+    margin-left: 164.5px;
+    margin-right: 164.5px;
+    padding-left: 50px;
+    
+p {
+    padding-left: 150px;
+}
+
+
+}
+
+.top_image {
+    padding-top: 120px;
+    text-align: center;
+    margin: 40px;
+    
+}
+
+.top_button {
+   
+
+}
+.button-guest {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    padding-left: 150px;
+    margin: 20px;
+
+  a {
+    padding: 15px 20px;
+    margin: 15px 10px;
+    background-color:white;
+    border: 1px solid;
+    border-color: #F16821;;
+    width: 100%;
+    text-align: center;
+    color: #F16821;
+    padding: 19px 25px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50rem;
+    font-weight: 400px;
+    transition: color 0.15s;
+
+   }  
+   a hover {
+
+   }
+}
+.button-signin {
+   
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-left: 180px;
+
+
+    a {
+        padding: 15px 10px;
+        background-color:white;
+        border: 1px solid;
+        border-color: #F16821;;
+        width: 100%;
+        text-align: center;
+        color: #F16821;
+        padding: 19px 25px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 50rem;
+        font-weight: 400px;
+        transition: color 0.15s;
+    }
+
+}
+.right-image {
+    overflow: hidden;
+    float: right;
+    width: 350px;
+    height: auto;
+    padding-right: 200px;
+}
