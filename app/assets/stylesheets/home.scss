@@ -108,6 +108,15 @@ p {
             text-align: center;
             font-size: 25px;
         }
-
+    }
+}
+.message-wrapper {
+    margin: auto;
+    text-align: center;
+    .button-guest{
+        padding-left: 0;
+    }
+    .button-signin {
+        padding-left: 0;
     }
 }
