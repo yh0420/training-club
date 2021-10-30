@@ -1,0 +1,131 @@
+.top_wrapper {
+    margin-left: 164.5px;
+    margin-right: 164.5px;
+    padding-left: 50px;
+    
+p {
+    padding-left: 150px;
+}
+}
+
+.top_image {
+    padding-top: 120px;
+    text-align: center;
+    margin: 40px;
+}
+.button-guest {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    padding-left: 150px;
+    margin: 20px;
+
+  a {
+    padding: 15px 20px;
+    margin: 15px 10px;
+    background-color:white;
+    border: 1px solid;
+    border-color: #F16821;;
+    width: 100%;
+    text-align: center;
+    color: #F16821;
+    padding: 19px 25px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50rem;
+    font-weight: 400px;
+    transition: color 0.15s;
+
+   }  
+}
+.button-signin {
+   
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-left: 180px;
+
+
+    a {
+        padding: 15px 10px;
+        background-color:white;
+        border: 1px solid;
+        border-color: #1A3263;
+        width: 100%;
+        text-align: center;
+        color: #1A3263;
+        padding: 19px 25px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 50rem;
+        font-weight: 400px;
+        transition: color 0.15s;
+    }
+
+}
+.right-image {
+    overflow: hidden;
+    float: right;
+    width: 350px;
+    height: auto;
+    padding-right: 200px;
+}
+.description {
+  margin-top: 100px;
+  text-align: center;
+  padding: 50px 35px;
+  background: #F16821;
+  color: white;
+}
+.contents {
+    display:inline-flex;
+    justify-content:center;
+    
+    img {
+        width:30%;
+        height: auto;
+    }
+}
+.contents-explanation {
+    padding-top: 50px;
+
+}
+.other-function {
+    margin: 50px 0 30px 0;
+    text-align: center;
+    background-color: #f6f8fb;
+    padding: 50px 0;
+
+
+    .card {
+        display:inline-flex;
+        justify-content: center;
+        background-color: white;
+        margin-right: 40px;
+        text-align: left;
+        padding: 20px;
+        border-radius: 20px;
+
+        h4 {
+            text-align: center;
+            font-size: 25px;
+        }
+    }
+}
+.message-wrapper {
+    margin: auto;
+    text-align: center;
+    .button-guest{
+        padding-left: 0;
+    }
+    .button-signin {
+        padding-left: 0;
+    }
+}
+.footer {
+    background-color: #F16821;
+    text-align: right;
+    margin-top: 25px;
+    padding: 3px 15px;
+    color: white;
+}
+
+

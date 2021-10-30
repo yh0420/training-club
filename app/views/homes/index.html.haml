@@ -1,0 +1,100 @@
+.container
+  .top_wrapper
+    .top_image
+      =image_tag 'app_logo.png'
+      =image_tag 'undraw_fitness_tracker.png', class: 'right-image'
+    .top_text
+      %p 筋トレを継続したいあなたに
+    .top_button
+      .button-guest
+        = link_to 'ゲストログイン', class: 'btn login-btn'
+      .button-signin
+        = link_to '登録して始める', class: 'login-btn'
+  .description 
+    %h3 TrainingClubとは
+    %p 
+      目標を立てて、楽しく筋トレの
+      %br
+      積み上げを記録できるサービスです
+  .function
+    .contents
+      .contents-image
+      =image_tag 'undraw_exercise_registration.png'
+      .contents-explanation
+        %h3 事前に種目を登録
+        %p
+        継続したい種目を登録した後は
+        %br
+        投稿時に選択するだけ。
+        %br
+        毎日、簡単に積み上げ投稿ができます。
+    .contents
+      .contents-explanation
+        %h3 ランキング機能
+        %p
+        レベルが上位３名になると、ランキングに
+        %br
+        ユーザー名とレベルが載ります。
+        %br
+        ランキングに載ることで、モチベーション
+        %br
+        維持をサポート。
+      .contents-image
+      =image_tag 'undraw_exercise_registration.png'
+    .contents
+      .contents-image
+      =image_tag 'undraw_exercise_registration.png'
+      .contents-explanation
+        %h3 フォロー機能
+        %p 
+        誰かにフォローされる喜び｣をユーザーに
+        %br
+        も味わってもらい、 エクササイズに取り
+        %br
+        組む際のモチベーションアップへ。
+  .other-function
+    %p その他、継続をサポートする仕組み
+    .card 
+      .card-explanation
+        %h4 いいね機能
+        %p 
+        毎日の積み上げ投稿に対して、い
+        %br
+        いねを押して、みんなでモチベーション
+        %br
+        を高めあうことができます
+    .card 
+      .card-explanation
+        %h4 Lvアップ機能
+        %p 
+        エクササイズの合計時間で、レベルが上
+        %br
+        がります。 レベルが高いほど、エクササ
+        %br
+        イズを積み上げている証明になります。
+    .card 
+      .card-explanation
+        %h4 目標設定機能
+        %p 
+        マイページで、目標を設定することがで
+        %br
+        きます。 目標を宣言することで、やる気
+        %br
+        アップにつながります。
+  .message-wrapper 
+    .message
+      %h5.title
+      %img.logo{src: "/assets/logo.png", style: "vertical-align:bottom;"}>/
+      をはじめよう!
+      %p 登録は1分で完了します。
+    .button-guest
+      = link_to 'ゲストログイン', class: 'btn login-btn'
+    .button-signin
+      = link_to '登録して始める', class: 'login-btn'
+  .footer 
+    .footer-title
+    %p ©️ TrainingClub 2021
+
+
+        
+
