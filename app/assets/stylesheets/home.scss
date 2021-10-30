@@ -6,20 +6,12 @@
 p {
     padding-left: 150px;
 }
-
-
 }
 
 .top_image {
     padding-top: 120px;
     text-align: center;
     margin: 40px;
-    
-}
-
-.top_button {
-   
-
 }
 .button-guest {
     padding-top: 40px;
@@ -44,9 +36,6 @@ p {
     transition: color 0.15s;
 
    }  
-   a hover {
-
-   }
 }
 .button-signin {
    
@@ -59,10 +48,10 @@ p {
         padding: 15px 10px;
         background-color:white;
         border: 1px solid;
-        border-color: #F16821;;
+        border-color: #1A3263;
         width: 100%;
         text-align: center;
-        color: #F16821;
+        color: #1A3263;
         padding: 19px 25px;
         font-weight: bold;
         cursor: pointer;
@@ -78,4 +67,11 @@ p {
     width: 350px;
     height: auto;
     padding-right: 200px;
+}
+.description {
+  margin-top: 100px;
+  text-align: center;
+  padding: 50px 35px;
+  background: #F16821;
+  color: white;
 }
