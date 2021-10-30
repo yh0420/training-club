@@ -75,3 +75,16 @@ p {
   background: #F16821;
   color: white;
 }
+.contents {
+    display:inline-flex;
+    justify-content:center;
+    
+    img {
+        width:30%;
+        height: auto;
+    }
+}
+.contents-explanation {
+    padding-top: 50px;
+
+}
