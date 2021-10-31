@@ -127,5 +127,19 @@ p {
     padding: 3px 15px;
     color: white;
 }
+.login {
+    display:inline-flex;
+    justify-content:right;
+    padding: 15px 10px;
+    background-color:white;
+    border: 2px solid;
+    border-color: #1A3263;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 30rem;
+    font-weight: 400px;
+    transition: color 0.15s;
+    margin: 20px 5px 0 750px;
+}
 
 

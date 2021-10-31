@@ -1,5 +1,7 @@
 .container
   .top_wrapper
+    .login 
+      = link_to 'アカウントをお持ちの方はこちらから',new_user_session_path
     .top_image
       =image_tag 'app_logo.png'
       =image_tag 'undraw_fitness_tracker.png', class: 'right-image'
@@ -9,7 +11,7 @@
       .button-guest
         = link_to 'ゲストログイン', class: 'btn login-btn'
       .button-signin
-        = link_to '登録して始める', class: 'login-btn'
+        = link_to '登録して始める',new_user_registration_path, class: 'login-btn'
   .description 
     %h3 TrainingClubとは
     %p 
@@ -90,7 +92,7 @@
     .button-guest
       = link_to 'ゲストログイン', class: 'btn login-btn'
     .button-signin
-      = link_to '登録して始める', class: 'login-btn'
+      = link_to '登録して始める',new_user_registration_path, class: 'login-btn'
   .footer 
     .footer-title
     %p ©️ TrainingClub 2021
