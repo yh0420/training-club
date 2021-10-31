@@ -27,7 +27,7 @@
               = link_to 'みんなのTraining'
           %li.nav-item-active    
             %i.fas.fa-sign-out-alt
-              = link_to 'ログアウト'
+              = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete' }
 
       
   
