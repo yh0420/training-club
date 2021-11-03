@@ -1,0 +1,9 @@
+.card 
+  .card-body 
+    = form_with(model: article, local: true) do |f|
+      %div
+        = f.label :day, '日付' 
+      %div
+        = f.date_field :day, class: 'form-control', value: Time.zone.now.strftime("%Y-%m-%d")
+      %div 
+        = f.label :exercise_id
