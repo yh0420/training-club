@@ -1,4 +1,4 @@
 class Article < ApplicationRecord
-    belongs_to :user
-    belongs_to :training
+  belongs_to :user, optional: true
+  belongs_to :training, optional: true
 end
