@@ -10,7 +10,7 @@ class ArticlesController < ApplicationController
     end
   
     def create
-        @article = Article.create(article_params)
+        @article = Article.create!(article_params)
         if @article.save
           redirect_to article_path(@article)
         else
