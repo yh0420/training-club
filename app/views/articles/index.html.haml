@@ -1,1 +1,14 @@
-表示一覧だよー
+%h4 みんなの積み上げ
+- @articles.each do |article|
+  .card
+    = link_to article_path(article) do  
+      .card-body
+        %div
+          %P= article.created_at
+          %p= article.user.name
+          %p= article.body
+          
+          
+
+
+          
