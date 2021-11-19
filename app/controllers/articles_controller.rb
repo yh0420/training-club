@@ -3,6 +3,10 @@ class ArticlesController < ApplicationController
     before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   
     def index
+      @articles = Article.includes(:user, :likes, :comments).order(created_at: :desc)
+      @articles = Article.all
+      @training = Training.includes(:name)
+      
       
     end
     def show
@@ -24,10 +28,13 @@ class ArticlesController < ApplicationController
 
       private
       def article_params
-        params.require(:article).permit(:day, :minutes, :body, :training, :user_id, :comments)
+        params.require(:article).permit(:day, :minutes, :body, :training, :user_id, :comments, :name)
       end
 
       def set_article
         @article = Article.find(params[:id])
+      end
+      def set_training
+        @training = Article.find(params[:name])
       end
 end

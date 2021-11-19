@@ -1,6 +1,8 @@
 = form_with(model: @article, url: articles_path, method: 'post', local: true) do |f| 
   %div 
-    = f.collection_select :training_id, current_user.trainings.all, :id, :name, {prompt: ""}, class: 'form-control'  
+    = f.label :name, '種目'
+  %div 
+    = f.collection_select :name, current_user.trainings.all, :name, :name, {prompt: ""}, class: 'form-control'  
   %div
     = f.label :body, '内容'
   %div
@@ -13,8 +15,5 @@
     = f.label :minutes, '時間'
   %div 
     = f.number_field :minutes, min: "0", class: 'form-control', required: true
-    
-  
-
     = f.submit '保存', class: 'btn-primary'
 
