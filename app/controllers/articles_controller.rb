@@ -11,6 +11,8 @@ class ArticlesController < ApplicationController
     end
     def show
         @article = Article.find(params[:id])
+        @articles = Article.all
+        @articles = Article.includes(:user, :likes, :comments).order(created_at: :desc)
     end
   
     def new
