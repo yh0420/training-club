@@ -18,7 +18,7 @@
         %ul 
           %li.nav-item-active
             %i.fas.fa-user
-              = link_to 'マイページ', new_training_path
+              = link_to 'プロフィール', user_path(id: current_user.id)
           %li.nav-item-active
             %i.far.fa-calendar-check
               = link_to '今日のTraining', new_article_path
