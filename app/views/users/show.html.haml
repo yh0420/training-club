@@ -3,12 +3,18 @@
     .profilePage_user_image
       %img.logo{src: "/assets/default.png", style: "vertical-align:bottom;"}>/
     .profilePage_user_name
-      #{current_user.name} 
-    .profilepage_dropdown
-      = image_tag 'Combined Shape (1).png', class: 'dropbtn'
+      %h4 #{current_user.name} 
+    .dropdown
+      .dropdown-img
+        = image_tag 'Combined Shape (1).png', class: 'dropbtn'
       .dropdown-content.mini
-        = link_to 'トレーニング編集', new_training_path
+        = link_to 'トレーニング編集', trainings_path
         = link_to 'プロフィール編集', new_training_path
+  .my_post 
+    %i.far.fa-clipboard
+    %h4 あなたの投稿
+  
+
 
 
 
