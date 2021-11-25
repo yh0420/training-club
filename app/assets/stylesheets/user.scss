@@ -35,21 +35,25 @@
     display: block;
   }
 
-.card{
+  .profile-card{
     display: flex;
     width: 500px;
     box-shadow: 2px 2px 4px #ccc;
-    margin-left: 400px;
+    margin-left: 450px;
     margin-top: 80px;
     padding: 20px;
     
 
-    .logo {
+    .logo{
      width: 150px;
      margin : 0 auto;
      display: block;
      margin:auto;
-     
-     
     }
+}
+.my_post {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 200px;
+
 }
