@@ -1,0 +1,47 @@
+.profile_page
+  .profile-card
+    .profilePage_user_image
+      %img.logo{src: "/assets/default.png", style: "vertical-align:bottom;"}>/
+    .profilePage_user_name
+      %h4 #{current_user.name} 
+    .dropdown
+      .dropdown-img
+        = image_tag 'Combined Shape (1).png', class: 'dropbtn'
+      .dropdown-content.mini
+        = link_to 'トレーニング編集', trainings_path
+        = link_to 'プロフィール編集', new_training_path
+  .my_post 
+    %i.far.fa-clipboard 
+      = 'あなたの投稿'
+  .my_article
+  - @articles.each do |article|
+    .card-ariticles
+      .card-body
+        %p エクササイズ：#{article.name} #{article.minutes} 分
+        %p= article.day
+        %p 感想 : #{article.body}
+    
+      
+    
+    
+        
+
+
+
+
+  
+
+
+
+
+
+
+   
+        
+      
+        
+
+
+    
+
+  

@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :trainings
   resources :articles do
   end
+  resources :users, only: [:show] do
+  end
 end

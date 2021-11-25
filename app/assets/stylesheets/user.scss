@@ -1,0 +1,59 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 200px;
+  }
+  
+  .dropdown-content {
+    font-weight: normal;
+    display: none;
+    right: 0;
+    position:absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+    &.mini {
+        min-width: 170px;
+
+    }
+  }
+  
+  .dropdown-content a {
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+
+  }
+  
+  .dropdown-content a:hover {
+    background-color: white;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .profile-card{
+    display: flex;
+    width: 500px;
+    box-shadow: 2px 2px 4px #ccc;
+    margin-left: 450px;
+    margin-top: 80px;
+    padding: 20px;
+    
+
+    .logo{
+     width: 150px;
+     margin : 0 auto;
+     display: block;
+     margin:auto;
+    }
+}
+.my_post {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 200px;
+
+}
