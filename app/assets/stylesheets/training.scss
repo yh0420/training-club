@@ -1,0 +1,19 @@
+.training_card {
+    display:flex;
+    box-shadow: 4px 4px 6px #ccc;
+    justify-content: space-between;
+    margin: 50px 250px;
+    
+
+    .training_name {
+     padding-left: 50px;
+    }
+
+    .training_button {
+        font-size: 20px;
+        padding-top: 15px;
+        padding-right: 10px;
+
+       
+    }
+}

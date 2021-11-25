@@ -1,2 +1,11 @@
-- @trainings.each do |training|
-  = training.name
+.training 
+  - @trainings.each do |training|
+    .training_card
+      .training_name
+        %h4 #{training.name}
+      .training_button
+        = link_to edit_training_path(training) do
+          %i.fas.fa-pen
+        = link_to training_path(training), method: :delete, data: { confirm: "削除しますか？" } do
+          %i.far.fa-trash-alt
+  = link_to '種目を登録する', new_training_path, class: 'btn-index-trainings'

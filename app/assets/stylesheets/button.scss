@@ -1,0 +1,61 @@
+@import './variables'; 
+
+.btn-primary {
+    border-color: #F16821;;
+    background-color:white;
+    border: 1px solid;
+    text-align: center;
+    color: #F16821;
+    margin: 10px;
+    font-weight: 400px;
+    padding: 15px 20px;
+    border-radius: 50rem;
+    width: 50%;
+    transition: color 0.15s;
+    margin-left: 300px;
+
+   
+  }
+
+  .btn-secondary {
+    background-color: white;
+    border: solid 1px $primary-color;
+    width: 100%;
+    text-align: center;
+    color: $primary-color;
+    padding: 16px 0;
+    font-weight: bold;
+  }
+
+  .btn-trainings {
+    border-color: #F16821;;
+    background-color:white;
+    border: 1px solid;
+    text-align: center;
+    color: #F16821;
+    margin: 20px;
+    font-weight: 400px;
+    padding: 15px 20px;
+    border-radius: 50rem;
+    width: 20%;
+    transition: color 0.15s;
+    margin-left: 550px;
+    margin-top:50px;
+
+  }
+  .btn-index-trainings {
+    border-color: #F16821;;
+    background-color:white;
+    border: 1px solid;
+    text-align: center;
+    color: #F16821;
+    margin: 20px;
+    font-weight: 400px;
+    padding: 25px 65px;
+    border-radius: 50rem;
+    width: 20%;
+    transition: color 0.15s;
+    margin-left: 600px;
+    
+
+  }

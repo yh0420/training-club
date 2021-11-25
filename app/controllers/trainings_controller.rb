@@ -1,5 +1,5 @@
 class TrainingsController < ApplicationController
-  before_action :set_trainings, only: %i[edit update destroy]
+  before_action :set_training, only: %i[edit update destroy]
 
   def index
     @trainings = current_user.trainings.order(id: :asc)
@@ -20,6 +20,7 @@ class TrainingsController < ApplicationController
   end
 
   def edit
+
   end
 
   def update
