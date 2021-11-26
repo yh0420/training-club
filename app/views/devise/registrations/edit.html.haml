@@ -1,36 +1,22 @@
-%h2
-  Edit #{resource_name.to_s.humanize}
+%h4.title アカウント編集
 = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
+  .form-group
+    = f.label :名前
+    %br/
+    = f.text_field :name, autofocus: true, autocomplete: 'name', class: 'form-control'
+  .form-group
     = f.label :email
     %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-    %div
-      Currently waiting confirmation for: #{resource.unconfirmed_email}
-  .field
-    = f.label :password
-    %i (leave blank if you don't want to change it)
+    = f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control'
+  .form-group
+    = f.label :objective
+    = f.text_area :objective, autofocus: true, class: 'form-control'
+  .form-group
+    = f.label :profile_image
     %br/
-    = f.password_field :password, autocomplete: "new-password"
-    - if @minimum_password_length
-      %br/
-      %em
-        = @minimum_password_length
-        characters minimum
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .field
-    = f.label :current_password
-    %i (we need your current password to confirm your changes)
-    %br/
-    = f.password_field :current_password, autocomplete: "current-password"
-  .actions
-    = f.submit "Update"
-%h3 Cancel my account
-%p
-  Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
-= link_to "Back", :back
+    = image_tag @user.profile_image.url if @user.profile_image?
+    = f.file_field :profile_image, accept: "image/png,image/jpeg,image/gif"
+  = link_to t('.cancel_my_account'), registration_path(resource_name), data: {confirm: t('.are_you_sure')}, method: :delete, class: 'btn btn-outline-danger'
+  .form-group.row.justify-content-center
+    = f.submit t('.update'), class: 'btn btn-outline-dark btn-lg rounded-pill'
+    = link_to "もどる", user_path(id: current_user.id), class: 'btn btn-outline-dark btn-lg rounded-pill'
