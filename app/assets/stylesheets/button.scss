@@ -44,6 +44,7 @@
 
   }
   .btn-index-trainings {
+    display: block;
     border-color: #F16821;;
     background-color:white;
     border: 1px solid;
@@ -55,7 +56,14 @@
     border-radius: 50rem;
     width: 20%;
     transition: color 0.15s;
-    margin-left: 600px;
+    margin-left: 500px;
+    margin-top: 100px;
+  }
+  .btn.btn-secondary {
+    background-color: #1A3263;
+    border-color: #1A3263;
+    border-radius: 100%;
+    width: 30px;
+    padding: 8px;
     
-
   }
