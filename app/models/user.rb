@@ -7,6 +7,6 @@ class User < ApplicationRecord
   has_many :article, dependent: :destroy
   has_many :trainings, dependent: :destroy
 
-  
+  has_one_attached :avatar
  
 end

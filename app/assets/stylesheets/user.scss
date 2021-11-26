@@ -1,3 +1,5 @@
+$avatar-size: 120px;
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -45,7 +47,9 @@
     
 
     .logo{
-     width: 150px;
+        width: $avatar-size;
+        height: $avatar-size;
+        border-radius: 100%;
      margin : 0 auto;
      display: block;
      margin:auto;
