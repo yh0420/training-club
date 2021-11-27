@@ -23,7 +23,7 @@ class ArticlesController < ApplicationController
     def create
         @article = current_user.article.build(article_params)
         if @article.save
-          redirect_to article_path(@article)
+          redirect_to article_path(@article), notice: '保存できました'
         else
           render :new
         end

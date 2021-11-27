@@ -11,8 +11,15 @@ class User < ApplicationRecord
 
   has_one_attached :avatar
 
-  def has_liked?(article)
-    likes.exists?(article_id: article.id)
+    def has_liked?(article)
+      likes.exists?(article_id: article.id)
+    end
+
+    def self.guest
+      find_or_create_by!(email: 'guest@example.com') do |user|
+        user.password = SecureRandom.urlsafe_base64
+        user.name = "ゲストユーザー"
+        user.objective = "毎日5分運動する"
+    end
   end
- 
 end
