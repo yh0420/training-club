@@ -8,7 +8,9 @@
           %p= article.user.name
           %p= article.body
           %p= article.name
-          
+    .card_heart
+      = image_tag 'heart.svg'
+      %span= article.like_count
           
 
 
