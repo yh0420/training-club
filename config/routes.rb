@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   resources :trainings
   resources :articles do
     resources :comments, only: [:new, :create]
+
+    resource :like, only: [:create, :destroy]
   end
   resources :users, only: [:show] do
   end
+  resources :favorites, only: [:index]
 end
