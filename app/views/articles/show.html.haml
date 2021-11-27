@@ -3,3 +3,13 @@
   %p= @article.body
   %p= @article.name
   %p= @article.day
+
+.article
+  %h2 コメント一覧
+  - @comments.each do |comment|
+    .article_comment
+      %p= comment.content
+.container
+  = link_to new_article_comment_path(@article) do
+    .btn-secondary
+      コメントを追加
