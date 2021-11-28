@@ -1,3 +1,9 @@
+.article-detail
+  = link_to account_path(@article.user.id) do
+    - if @article.user.avatar.attached?
+      = image_tag @article.user.avatar, class: 'logo'
+    - else
+      = image_tag 'default.png', class: 'logo'
 %div 
   %p= @article.user.name
   %p= @article.body

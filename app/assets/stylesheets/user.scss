@@ -45,19 +45,16 @@ $avatar-size: 120px;
     margin-top: 80px;
     padding: 20px;
     
-
-    .logo{
-        width: $avatar-size;
-        height: $avatar-size;
-        border-radius: 100%;
-     margin : 0 auto;
-     display: block;
-     margin:auto;
-    }
+}
+.logo{
+    width: $avatar-size;
+    height: $avatar-size;
+    border-radius: 100%;
+ margin : 0 auto;
+ display: block;
 }
 .my_post {
   font-size: 20px;
   text-align: center;
   margin-top: 200px;
-
 }
