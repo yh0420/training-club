@@ -6,6 +6,7 @@ class ArticlesController < ApplicationController
       @articles = Article.includes(:user, :likes, :comments).order(created_at: :desc)
       @articles = Article.all
       @training = Training.includes(:name)
+    
       
       
     end
