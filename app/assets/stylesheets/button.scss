@@ -13,6 +13,8 @@
     width: 50%;
     transition: color 0.15s;
     margin-left: 300px;
+    display:block;
+    margin:0 auto;
 
    
   }
@@ -41,6 +43,7 @@
     transition: color 0.15s;
     margin-left: 550px;
     margin-top:50px;
+
 
   }
   .btn-index-trainings {
@@ -86,4 +89,19 @@
     color: #fff;
    background: #f56500;
    cursor: pointer;
+}
+.center-btn {
+  display:block;
+  margin:0 auto;
+  background-color: white;
+  border: solid 1px #f56500;;
+  width: 30%;
+  text-align: center;
+  color: #F16821;
+  padding: 16px 0;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 10rem;
+
 }

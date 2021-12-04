@@ -1,0 +1,15 @@
+.other-profile-card
+  .other-profile-card__inner
+    .profile-thumb
+      - if @user.avatar.attached?
+        = image_tag @user.avatar,class: 'logo'
+      -else 
+        = image_tag 'default.png', class: 'logo'
+    .profile-content
+      %span.profile-name 
+        = @user.name 
+        = render 'relationships/follow_button', user: @user
+      %span.profile-level
+        = @user.level
+      %span.profile-obvective 
+        %p 目標： #{@user.objective}
