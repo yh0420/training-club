@@ -1,7 +1,7 @@
 @import './variables'; 
 
 .btn-primary {
-    border-color: #F16821;;
+    border-color: #F16821;
     background-color:white;
     border: 1px solid;
     text-align: center;
@@ -28,7 +28,7 @@
   }
 
   .btn-trainings {
-    border-color: #F16821;;
+    border-color: #F16821;
     background-color:white;
     border: 1px solid;
     text-align: center;
@@ -45,7 +45,7 @@
   }
   .btn-index-trainings {
     display: block;
-    border-color: #F16821;;
+    border-color: #F16821;
     background-color:white;
     border: 1px solid;
     text-align: center;
@@ -67,3 +67,23 @@
     padding: 8px;
     
   }
+  .follows {
+   
+    background-color:white;
+    border: 1px solid;
+    text-align: center;
+    margin: 2px;
+    font-weight: 200px;
+    padding: 5px 10px;
+    border-radius: 10rem;
+    width: 50%;
+    transition: color 0.15s;
+    color: #fff;
+    background-color: #eb6100;
+    cursor: pointer;
+  }
+  .follows:hover  {
+    color: #fff;
+   background: #f56500;
+   cursor: pointer;
+}
