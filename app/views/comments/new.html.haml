@@ -5,7 +5,7 @@
 
   = form_with(model: @comment, url: article_comments_path(@comment.article), local: true) do |f|
     %div
-      = f.label :content, '内容'
+      = f.label :content, '内容', class: 'label'
     %div
-      = f.text_area :content
-    = f.submit '保存', class: 'btn-trainings'
+      = f.text_area :content, class: 'form-content'
+    = f.submit '保存', class: 'center-btn'

@@ -1,19 +1,19 @@
 = form_with(model: @article, url: articles_path, method: 'post', local: true) do |f| 
   %div 
-    = f.label :name, '種目'
+    = f.label :name, '種目', class: 'label'
   %div 
     = f.collection_select :name, current_user.trainings.all, :name, :name, {prompt: ""}, class: 'form-control'  
   %div
-    = f.label :body, '内容'
+    = f.label :body, '内容', class: 'label'
   %div
-    = f.text_area :body
+    = f.text_area :body, class: 'form-content'
   %div 
-    = f.label :day, '日付'
+    = f.label :day, '日付', class: 'label'
   %div 
     = f.date_field :day, class: 'form-control', value: Time.zone.now.strftime("%Y-%m-%d")
   %div 
-    = f.label :minutes, '時間'
+    = f.label :minutes, '時間', class: 'label'
   %div 
     = f.number_field :minutes, min: "0", class: 'form-control', required: true
-    = f.submit '保存'
+  = f.submit '保存', class: 'center-btn'
 

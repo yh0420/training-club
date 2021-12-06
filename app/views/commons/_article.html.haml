@@ -1,16 +1,25 @@
-= link_to article_path(article) do
-  .card
-    - if article.eyecatch.attached?
-      .card_image
-        = image_tag article.eyecatch
-    .card_content
-      .card_title
-        = article.title
-      .card_heart
+.card
+  = link_to article_path(article) do  
+    .card_image
+      - if article.user.avatar.attached?
+        = image_tag article.user.avatar, class: 'card_image'
+      - else
+        = image_tag 'default.png', class: 'card_image'
+    .card_detail
+      .card_name
+        %h4= article.user.name
+      .card_training
+        %p 種目 : #{article.name}
+      .card_minutes
+        %p 時間 : #{article.minutes}分
+      .card_content
+        %p 感想 : #{article.body}
+    .card_sub
+      .card_heart 
         = image_tag 'heart.svg'
         %span= article.like_count
-      .card_detail
-        = image_tag article.user.avatar_image
-        %div
-          %p= article.author_name
-          %p= article.display_created_at
+      .card_comment 
+        = image_tag 'comment.png'
+        %span= article.comment_count
+    .card_create
+      %P= article.created_at.strftime("%Y年%m月%d日")

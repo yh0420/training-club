@@ -10,12 +10,10 @@
     = f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control'
   .form-group
     = f.label :objective
-    = f.text_area :objective, autofocus: true, class: 'form-control'
+    = f.text_area :objective, autofocus: true, class: 'form-content'
   .form-group
     = f.label :avatar
     %br/
-    = f.file_field :avatar
-  = link_to t('.cancel_my_account'), registration_path(resource_name), data: {confirm: t('.are_you_sure')}, method: :delete, class: 'btn btn-outline-danger'
+    = f.file_field :avatar, class: 'form-control'
   .form-group.row.justify-content-center
-    = f.submit t('.update'), class: 'btn btn-outline-dark btn-lg rounded-pill'
-    = link_to "もどる", user_path(id: current_user.id), class: 'btn btn-outline-dark btn-lg rounded-pill'
+    = f.submit t('.update'), class: 'center-btn'

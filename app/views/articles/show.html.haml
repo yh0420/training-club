@@ -1,29 +1,57 @@
-.article-detail
+.card
   = link_to account_path(@article.user.id) do
     - if @article.user.avatar.attached?
-      = image_tag @article.user.avatar, class: 'logo'
+      = image_tag @article.user.avatar, class: 'card_image'
     - else
-      = image_tag 'default.png', class: 'logo'
-%div 
-  %p= @article.user.name
-  %p= @article.body
-  %p= @article.name
-  %p= @article.day
-  - if user_signed_in?
-    - if current_user.has_liked?(@article)
-      .article_heart
-        = link_to article_like_path(@article), data: { method: 'delete' } do
-          = image_tag 'heart-active.svg'
-    - else
-      .article_heart
-        = link_to article_like_path(@article), data: { method: 'post' } do
-          = image_tag 'heart.svg'
-.article
+      = image_tag 'default.png', class: 'card_image'
+    .card_detail
+      .card_name
+        %h4= @article.user.name
+      .card_training
+        %p 種目 : #{@article.name}
+      .card_minutes
+        %p 時間 : #{@article.minutes}分
+      .card_content
+        %p 感想 : #{@article.body}
+      .card_create
+        %P= @article.created_at.strftime("%Y年%m月%d日  %H：%M")
+    .card_sub 
+      .card_heart 
+        - if user_signed_in?
+          - if current_user.has_liked?(@article)
+            .article_heart
+              = link_to article_like_path(@article), data: { method: 'delete' } do
+                = image_tag 'heart-active.svg'
+                %span= @article.like_count
+          - else
+            .article_heart
+              = link_to article_like_path(@article), data: { method: 'post' } do
+                = image_tag 'heart.svg'
+                %span= @article.like_count
+      .card_comment 
+        = image_tag 'comment.png'
+        %span= @article.comment_count
+.comment
   %h2 コメント一覧
   - @comments.each do |comment|
-    .article_comment
-      %p= comment.content
-.container
-  = link_to new_article_comment_path(@article) do
-    .btn-.btn-trainings
-      コメントを追加
+    = link_to account_path(comment.user.id) do
+      .card
+        .card_image
+          - if comment.user.avatar.attached?
+            = image_tag comment.user.avatar, class: 'card_image'
+          - else
+            = image_tag 'default.png', class: 'card_image'
+        .card_name
+          %h4 #{comment.user.name}
+        .card_content
+          %p= comment.content
+        .card_create
+          %P= comment.created_at.strftime("%Y年%m月%d日  %H：%M")
+.comment_form
+  = form_with(model: [@article, @comment], required: true) do |f|
+    .post
+      = f.label :content, 'コメントをする', class: 'label'
+    %div
+      = f.text_area :content, class: 'form-content'
+    = f.submit '保存', class: 'center-btn'
+

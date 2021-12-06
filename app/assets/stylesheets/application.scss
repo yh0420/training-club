@@ -20,6 +20,8 @@
  @import 'training';
  @import 'button';
  @import 'flash';
+ @import 'article';
+ @import 'comment';
 
  $text-base-color: #616161;
 
@@ -33,8 +35,9 @@
     height: 100%;
   }
 body {
-    margin: 0px;
-    padding: 0px;
+   
+    margin-left: auto;
+    margin-right: auto;
 }
 a {
     text-decoration: none;

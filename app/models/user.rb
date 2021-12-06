@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :trainings, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :favorite_articles, through: :likes, source: :article
+  has_many :comments, dependent: :destroy
 
   has_one_attached :avatar
 

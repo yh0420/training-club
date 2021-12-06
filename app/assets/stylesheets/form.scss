@@ -9,15 +9,15 @@ input, select {
   
   label {
     font-size: 12px;
+    text-align: center;
+    display:block;
+    margin:0 auto;
+    font-size:20px;
   }
-  
-  textarea {
-    width: 100%;
-    margin: 8px 0px;
-    padding: 8px 8px;
-    min-height: 440px;
-    resize: vertical;
-    border: 1px solid #EBEBEB;
+  .form-content {
+    width:50%;
+    height: 200px;
+    resize: none;
   }
 
   .training_form {
@@ -36,4 +36,18 @@ input, select {
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     margin-left: 320px ;
     margin-top:250px;
+  }
+  .form-control {
+    display:block;
+    margin:0 auto;
+    width:30%;
+    height: 20px;
+    border-radius: 5px;
+  }
+  .form-content {
+    display:block;
+    margin:0 auto;
+    width:30%;
+    height: 300px;
+    border-radius: 5px;
   }

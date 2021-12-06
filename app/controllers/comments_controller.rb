@@ -14,10 +14,10 @@ class CommentsController < ApplicationController
                 render :new
             end
         end
-    
+        
         private
         def comment_params
-            params.require(:comment).permit(:content)
+            params.require(:comment).permit(:content, :user_id, :article_id).merge(user_id: current_user.id, article_id: params[:article_id])
         end
 end
 

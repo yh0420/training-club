@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   root to: 'homes#index'
   resources :trainings
   resources :articles do
-    resources :comments, only: [:new, :create]
+    resources :comments, only: [:create, :destroy]
 
     resource :like, only: [:create, :destroy]
   end

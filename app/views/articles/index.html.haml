@@ -1,22 +1,5 @@
-%h4 みんなの積み上げ
+.post 
+  %i.far.fa-clipboard
+    = 'みんなの投稿'
 - @articles.each do |article|
-  .card
-    = link_to article_path(article) do  
-      .card-body
-        .profile-image
-          - if article.user.avatar.attached?
-            = image_tag article.user.avatar, class: 'logo'
-          - else
-            = image_tag 'default.png', class: 'logo'
-        %div
-          %P= article.created_at
-          %p= article.user.name
-          %p= article.body
-          %p= article.name
-    .card_heart
-      = image_tag 'heart.svg'
-      %span= article.like_count
-          
-
-
-          
+  = render 'commons/article', article: article

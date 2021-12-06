@@ -14,7 +14,9 @@ class ArticlesController < ApplicationController
         @article = Article.find(params[:id])
         @articles = Article.all
         @articles = Article.includes(:user, :likes, :comments).order(created_at: :desc)
-        @comments = @article.comments
+        @comments = @article.comments.includes(:user).order(created_at: :desc)
+        @comment = Comment.new
+        
     end
   
     def new

@@ -1,0 +1,74 @@
+$avatar-size: 45px;
+$heart-size: 20px;
+$comment-size: 22px;
+
+.card {
+    
+   background-color:#fff;
+   width: 500px;
+   padding: 10px;
+   margin: auto;
+   top:30px;
+   border :1px solid;
+   margin-top: 30px;
+   border-radius: 1rem;
+   
+
+
+}
+.card_image { 
+    width: $avatar-size;
+    height: $avatar-size;
+    border-radius: 100%;
+    top: 23px;
+    left:10px
+    
+   }
+   .card_name{
+       padding-left: 80px;
+       position: relative;
+       bottom:60px;
+       right:20px;
+      
+
+      
+   }
+
+   .card_heart {
+       padding-left: 350px;
+      
+    img {
+        width: $heart-size;
+        height: $heart-size;
+        
+    }
+}
+.card_create {
+    opacity: 0.8;
+    font-size: 10px;
+  
+
+}
+.card_content {
+   
+  
+}
+.card_sub {
+    display: flex;
+    padding-left:50px;
+}
+
+.card_comment {
+   padding-left:10px;
+ 
+    img{
+    height: $comment-size;
+    width: $comment-size;
+    }
+}
+
+.post {
+    text-align: center;
+    margin: 50px;
+    
+}
