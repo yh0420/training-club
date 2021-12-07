@@ -112,7 +112,7 @@ $avatar-size: 120px;
 }
 
 .profile-content{
-  padding: 15px;
+  
   text-align: center;
 }
 
@@ -139,5 +139,22 @@ $avatar-size: 120px;
 }
 .profile-relation p {
   display: inline-block;
+
+}
+.profile-follower {
+  padding-left: 20px;
+  display: flex;
+  
+}
+.profile-follow {
+  padding-left: 140px;
+  display: flex;
+  
+}
+.profile-relation {
+display: flex;
+margin: 0 auto;
+padding: 10px;
+
 
 }

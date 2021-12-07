@@ -6,14 +6,17 @@
       -else 
         = image_tag 'default.png', class: 'logo'
     .profile-content
-      %span.profile-name 
+      .profile-name 
         = @user.name 
         = render 'relationships/follow_button', user: @user
-      %span.profile-follow
-        = link_to "フォロー", followings_user_path(@user)
-      %span.profile-follower
-        = link_to "フォロワー", followers_user_path(@user)
-      %span.profile-level
+      .profile-relation
+        .profile-follow
+          = link_to "フォロー", followings_user_path(@user)
+          %span #{@user.followings.count}人
+        .profile-follower
+          = link_to "フォロワー", followers_user_path(@user)
+          %span #{@user.followers.count}人
+      .profile-level
         = @user.level
-      %span.profile-obvective 
+      .profile-obvective 
         %p 目標： #{@user.objective}

@@ -42,5 +42,12 @@ class User < ApplicationRecord
         user.name = "ゲストユーザー"
         user.objective = "毎日5分運動する"
     end
+
+    def followings_count
+      followings.count
+    end
+    def followers_count
+      followers.count
+    end
   end
 end
