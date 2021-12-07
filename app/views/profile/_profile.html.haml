@@ -11,10 +11,10 @@
         = render 'relationships/follow_button', user: @user
       .profile-relation
         .profile-follow
-          = link_to "フォロー", followings_user_path(@user)
+          = link_to "フォロー：", followings_user_path(@user)
           %span #{@user.followings.count}人
         .profile-follower
-          = link_to "フォロワー", followers_user_path(@user)
+          = link_to "フォロワー：", followers_user_path(@user)
           %span #{@user.followers.count}人
       .profile-level
         = @user.level

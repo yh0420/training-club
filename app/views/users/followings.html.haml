@@ -1,4 +1,2 @@
-%p フォロー一覧
-%br/
-- @users.each do |user|
-  = user.name
+%h2 フォロー
+= render 'users/relationship_member', user: @user
