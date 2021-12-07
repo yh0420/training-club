@@ -9,6 +9,10 @@
       %span.profile-name 
         = @user.name 
         = render 'relationships/follow_button', user: @user
+      %span.profile-follow
+        = link_to "フォロー", followings_user_path(@user)
+      %span.profile-follower
+        = link_to "フォロワー", followers_user_path(@user)
       %span.profile-level
         = @user.level
       %span.profile-obvective 
