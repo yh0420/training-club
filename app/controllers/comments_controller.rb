@@ -14,6 +14,12 @@ class CommentsController < ApplicationController
                 render :new
             end
         end
+
+        def destroy
+            current_user.comments.find(params[:id]).destroy!
+            flash[:alert] = '削除しました'
+            redirect_back(fallback_location: root_path)
+        end
         
         private
         def comment_params
