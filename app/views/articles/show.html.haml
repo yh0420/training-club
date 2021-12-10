@@ -55,6 +55,12 @@
           %p= comment.content
         .card_create
           %P= comment.created_at.strftime("%Y年%m月%d日  %H：%M")
+        .card_delete
+          - if current_user.id == comment.user_id
+            %a.far.fa-trash-alt
+              = link_to '削除', article_comment_path(comment.article.id, comment.id), method: :delete, data: { confirm: "削除しますか？" } 
+            
+             
 .comment_form
   = form_with(model: [@article, @comment], required: true) do |f|
     .post
