@@ -15,6 +15,14 @@
         %p 感想 : #{@article.body}
       .card_create
         %P= @article.created_at.strftime("%Y年%m月%d日  %H：%M")
+      .article_detail_actions
+        - if user_signed_in? && current_user.id == @article.user_id
+          .article_dropdown
+            .article_dropdown-img
+              = image_tag 'Combined Shape (1).png', class: 'article_dropbtn'
+            .article_dropdown-content.mini
+              = link_to '編集する', edit_article_path(@article)
+              = link_to '削除する', article_path(@article), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
     .card_sub 
       .card_heart 
         - if user_signed_in?

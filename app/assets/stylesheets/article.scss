@@ -49,10 +49,6 @@ $comment-size: 22px;
   
 
 }
-.card_content {
-   
-  
-}
 .card_sub {
     display: flex;
     padding-left:50px;
@@ -72,3 +68,46 @@ $comment-size: 22px;
     margin: 50px;
     
 }
+
+.article_dropdown {
+    position: relative;
+    bottom: 250px;
+    right: 400px;
+    display: inline-block;
+    margin-left: 850px;
+    cursor: pointer;
+  }
+  
+  .article_dropdown-content {
+    font-weight: normal;
+    display: none;
+    left: 200;
+    position:absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 10px 10px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    cursor: pointer;
+
+    &.mini {
+        min-width: 100px;
+        
+
+    }
+  }
+  
+  .article_dropdown-content a {
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+
+  }
+  
+  .article_dropdown-content a:hover {
+    background-color: white;
+  }
+  
+  .article_dropdown:hover .article_dropdown-content {
+    display: block;
+  }
