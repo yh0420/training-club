@@ -2,7 +2,8 @@ class UsersController < ApplicationController
     before_action :set_user, only: [:followings, :followers]
     def show
         @user = User.find(params[:id])
-        @articles = current_user.article
+        @articles = current_user.article.page(params[:page]).per(10)
+        
     end
     def followings
         @users = @user.followings

@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   
     def index
       @articles = Article.includes(:user, :likes, :comments).order(created_at: :desc)
-      @articles = Article.all
+      @articles = Article.all.page(params[:page]).per(10)
       @training = Training.includes(:name)
     
       

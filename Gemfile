@@ -28,6 +28,7 @@ gem 'hamlit'
 gem 'haml-rails'
 gem 'devise'
 gem 'devise-i18n'
+gem 'kaminari'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
