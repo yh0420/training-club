@@ -1,3 +1,5 @@
 = render 'profile/profile', user: current_user
 - @user.article.each do |article|
   = render 'commons/article', article: article
+.pagination
+  = paginate @articles

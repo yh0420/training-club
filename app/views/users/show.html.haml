@@ -12,6 +12,8 @@
 .my_article
 - @articles.each do |article|
   = render 'commons/article', article: article
+.pagination
+  = paginate @articles
   
     
   

@@ -3,3 +3,5 @@
     = 'みんなの投稿'
 - @articles.each do |article|
   = render 'commons/article', article: article
+.pagination
+  = paginate @articles
