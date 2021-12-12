@@ -17,7 +17,7 @@ Rails.application.routes.draw do
       get :followings, :followers
     end
   end
-  resources :favorites, only: [:index]
+  resources :likes, only: [:index]
   resources :accounts, only: [:show]
   resources :relationships, only: [:create, :destroy]
 end
