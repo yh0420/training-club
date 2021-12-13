@@ -31,32 +31,6 @@
         = image_tag 'comment.png'
         %span= @article.comment_count
 .comment
-  %h2 コメント一覧
-  - @comments.each do |comment|
-    = link_to account_path(comment.user.id) do
-      .card
-        .card_image
-          - if comment.user.avatar.attached?
-            = image_tag comment.user.avatar, class: 'card_image'
-          - else
-            = image_tag 'default.png', class: 'card_image'
-        .card_name
-          %h4 #{comment.user.name}
-        .card_content
-          %p= comment.content
-        .card_create
-          %P= comment.created_at.strftime("%Y年%m月%d日  %H：%M")
-        .card_delete
-          - if current_user.id == comment.user_id
-            %a.far.fa-trash-alt
-              = link_to '削除', article_comment_path(comment.article.id, comment.id), method: :delete, data: { confirm: "削除しますか？" } 
-            
-             
-.comment_form
-  = form_with(model: [@article, @comment], required: true) do |f|
-    .post
-      = f.label :content, 'コメントをする', class: 'label'
-    %div
-      = f.text_area :content, class: 'form-content'
-    = f.submit '保存', class: 'center-btn'
-
+  %div{id: "comment_area_#{@article.id}"}
+    = render "comments/index", comments: @comments, article: @article
+    = render "comments/form", comment: @comment

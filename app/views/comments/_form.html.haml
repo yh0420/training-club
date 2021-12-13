@@ -1,0 +1,6 @@
+= form_with(model: [@article, @comment], required: true) do |f|
+  .post
+    = f.label :content, 'コメントをする', class: 'label'
+    %div
+      = f.text_area :content, class: 'form-content'
+    = f.submit '保存', class: 'center-btn'
