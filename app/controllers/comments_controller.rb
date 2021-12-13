@@ -11,10 +11,9 @@ class CommentsController < ApplicationController
                 redirect_to article_path(article), notice: 'コメントを追加'
             else
                 flash.now[:error] = '更新できませんでした'
-                render :new
+                
+               end
             end
-        end
-
         def destroy
             current_user.comments.find(params[:id]).destroy!
             flash[:alert] = '削除しました'
