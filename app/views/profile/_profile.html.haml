@@ -8,14 +8,8 @@
     .profile-content
       .profile-name 
         = @user.name 
-        = render 'relationships/follow_button', user: @user
-      .profile-relation
-        .profile-follow
-          = link_to "フォロー：", followings_user_path(@user)
-          %span #{@user.followings.count}人
-        .profile-follower
-          = link_to "フォロワー：", followers_user_path(@user)
-          %span #{@user.followers.count}人
+      %div{class: "mypage-follow-contents-#{@user.id}"}
+        = render 'relationships/relationship', user: @user
       .profile-level
         = @user.level
       .profile-obvective 
