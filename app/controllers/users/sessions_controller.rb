@@ -1,10 +1,11 @@
 class Users::SessionsController < Devise::SessionsController
-  def new_guest
-    user = User.guest
-    sign_in user   # ユーザーをログインさせる
-    redirect_to articles_path(id: current_user.id), notice: 'ゲストとしてログインしました'
-   
+  def guest_sign_in
     
-    
+    user = User.find(28)  #ゲストユーザー（id:28）にログインさせている
+    user.update(email: 'guest@example.com',name: 'ゲストユーザー') do |user|
+    user.password = SecureRandom.urlsafe_base64
+  end
+    sign_in user  #ユーザーにログインさせる
+    redirect_to user_path(id: current_user.id)
   end
 end
