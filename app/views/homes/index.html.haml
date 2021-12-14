@@ -3,7 +3,7 @@
     .login 
       = link_to 'アカウントをお持ちの方はこちらから',new_user_session_path
     .top_image
-      =image_tag 'app_logo.png'
+      =image_tag 'Training club-logo (3).png', class: 'top-image'
       =image_tag 'undraw_fitness_tracker.png', class: 'right-image'
     .top_text
       %p 筋トレを継続したいあなたに
@@ -86,7 +86,7 @@
   .message-wrapper 
     .message
       %h5.title
-      %img{src: "/assets/logo.png", style: "vertical-align:bottom;"}>/
+      = image_tag 'Training club-logo (3).png'
       をはじめよう!
       %p 登録は1分で完了します。
     .button-guest

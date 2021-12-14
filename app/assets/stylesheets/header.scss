@@ -1,17 +1,18 @@
 .header {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid;
+  border-bottom: 2px solid #F16821;
   padding: 15px 10px;
+ 
   
   li {
     text-decoration: none;
   }
   img {
     cursor: pointer;
-    width: 140px;
-    height: 40px;
-    padding-top: 7px;
+    width: 180px;
+    height: auto;
+
   }
 }
 .header_content {
