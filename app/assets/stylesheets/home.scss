@@ -68,6 +68,11 @@ p {
     height: auto;
     padding-right: 200px;
 }
+.top-image {
+    width: 250px;
+    height: auto;
+    padding-left: 80px;
+}
 .description {
   margin-top: 100px;
   text-align: center;
@@ -118,6 +123,13 @@ p {
     }
     .button-signin {
         padding-left: 0;
+    }
+    img {
+       position: relative;
+       top: 14px;
+       left: 10px;
+        width: 150px;
+        height: auto;
     }
 }
 .footer {
