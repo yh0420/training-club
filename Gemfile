@@ -30,6 +30,7 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'kaminari'
 gem 'jquery-rails'
+gem 'aws-sdk-s3', require: false
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
