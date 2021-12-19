@@ -5,6 +5,8 @@ class Article < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_one_attached :avatar
+  has_one_attached :eyecatch
+  
   def like_count
     likes.count
   end

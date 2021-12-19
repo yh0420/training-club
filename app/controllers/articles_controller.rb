@@ -55,7 +55,7 @@ class ArticlesController < ApplicationController
 
       private
       def article_params
-        params.require(:article).permit(:day, :minutes, :body, :training, :user_id, :comments, :name)
+        params.require(:article).permit(:day, :minutes, :body, :training, :user_id, :comments, :name, :eyecatch)
       end
 
       def set_article

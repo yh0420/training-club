@@ -1,6 +1,10 @@
 $avatar-size: 45px;
 $heart-size: 20px;
 $comment-size: 22px;
+$container-padding: 16px;
+$article-image: 10px;
+
+
 
 .card {
     
@@ -12,7 +16,9 @@ $comment-size: 22px;
    border :1px solid;
    margin-top: 30px;
    border-radius: 1rem;
-   
+   position: relative;
+
+
 
 
 }
@@ -23,6 +29,20 @@ $comment-size: 22px;
     top: 23px;
     left:10px
     
+   }
+   .article_image {
+    img {
+        position: relative;
+        top: 150px;
+        left: 250px;
+      padding:20px;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 70%;
+        padding-top: 40px;
+      }
+
    }
    .card_name{
        padding-left: 80px;
@@ -70,9 +90,9 @@ $comment-size: 22px;
 }
 
 .article_dropdown {
-    position: relative;
-    bottom: 250px;
-    right: 400px;
+    position: absolute;
+    right: 50px;
+    top: 0;
     display: inline-block;
     margin-left: 850px;
     cursor: pointer;
