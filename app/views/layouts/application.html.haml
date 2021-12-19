@@ -11,12 +11,16 @@
     %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
     %link{href: "https://use.fontawesome.com/releases/v5.6.1/css/all.css", rel: "stylesheet"}/
   %body
-    %header.header 
-      .header_icon
-        =link_to image_tag("Training club-logo (3).png", class: "image"), root_path
-      - if user_signed_in?
-        .header_content 
-          %ul 
+    .header
+      .header_icon 
+        = link_to image_tag("Training club-logo (3).png", class: "image"), root_path
+      .a.nav-button
+        %span
+        %span
+        %span
+      .nav.nav-wrap
+        - if user_signed_in?
+          %ul.nav
             %li.nav-item-active
               %i.fas.fa-user
                 = link_to 'プロフィール', user_path(id: current_user.id)
@@ -29,12 +33,12 @@
             %li.nav-item-active    
               %i.fas.fa-sign-out-alt
                 = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete' }
-      - if flash.present?
-        .flash
-          - flash.each do |key, value|
-            %div{:class => key}= value
-        
+    - if flash.present?
+      .flash
+        - flash.each do |key, value|
+          %div{:class => key}= value
+            
 
-      
-  
-  = yield
+        
+    
+    = yield

@@ -15,5 +15,9 @@
     = f.label :minutes, '時間', class: 'label'
   %div 
     = f.number_field :minutes, min: "0", class: 'form-control', required: true
+  %div
+    = f.label :eyecatch, 'アイキャッチ', class: 'label'
+  %div
+    = f.file_field :eyecatch, class: 'form-content'
   = f.submit '保存', class: 'center-btn'
 
