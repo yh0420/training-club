@@ -1,41 +1,42 @@
-= render 'profile/profile', user: @user
-.dropdown
-  .dropdown-img
-    = image_tag 'Combined Shape (1).png', class: 'dropbtn'
-  .dropdown-content.mini
-    = link_to 'トレーニング編集', trainings_path
-    = link_to 'プロフィール編集', edit_user_registration_path
-    = link_to 'いいねした記事', likes_path
-.post 
-  %i.far.fa-clipboard 
-    = 'あなたの投稿'
-.my_article
-- @articles.each do |article|
-  = render 'commons/article', article: article
-.pagination
-  = paginate @articles
-  
+.container
+  = render 'profile/profile', user: @user
+  .dropdown
+    .dropdown-img
+      = image_tag 'Combined Shape (1).png', class: 'dropbtn'
+    .dropdown-content.mini
+      = link_to 'トレーニング編集', trainings_path
+      = link_to 'プロフィール編集', edit_user_registration_path
+      = link_to 'いいねした記事', likes_path
+  .post 
+    %i.far.fa-clipboard 
+      = 'あなたの投稿'
+  .my_article
+  - @articles.each do |article|
+    = render 'commons/article', article: article
+  .pagination
+    = paginate @articles
     
-  
-  
       
-
-
-
-
-  
-
-
-
-
-
-
-   
+    
+    
         
-      
-        
+
+
 
 
     
 
-  
+
+
+
+
+
+    
+          
+        
+          
+
+
+      
+
+    

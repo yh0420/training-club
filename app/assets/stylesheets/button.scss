@@ -105,3 +105,21 @@
   border-radius: 10rem;
 
 }
+//-----------------------------レスポンシブ-----------------------------//
+
+//-----------------------------スマホ表示-----------------------------//
+@media (max-width: 767px) {
+
+  .btn-index-trainings {
+   font-size: 10px;
+  margin-left: 80px;
+  }
+
+  .btn-trainings {
+   margin: 0 auto;
+   margin: 40px 150px;
+  }
+
+
+
+}
