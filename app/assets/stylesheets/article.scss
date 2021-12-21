@@ -132,7 +132,42 @@ $article-image: 10px;
     display: block;
   }
   .card_delete {
-      position:relative;
-      bottom: 150px;
+      position:absolute;
+      bottom: 10px;
       left: 440px;
   }
+
+//-----------------------------レスポンシブ-----------------------------//
+
+//-----------------------------スマホ表示-----------------------------//
+
+@media (max-width: 767px) {
+  .card {
+    width: 70%;
+
+    .card_sub {
+      
+      .card_heart {
+        padding-left: 110px;
+      }
+      .card_comment {
+        padding-left: 5px;
+      }
+  }
+  .card_delete {
+    left: 230px;
+      
+  }
+  .article_image {
+    img {
+        position: relative;
+        left: 130px;
+        width: 70%;
+        top: 70px
+      }
+    }
+  }
+  
+  
+
+}

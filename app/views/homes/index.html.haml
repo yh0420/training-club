@@ -1,7 +1,7 @@
 .container
   .top_wrapper
     .login 
-      = link_to 'アカウントをお持ちの方はこちらから',new_user_session_path
+      = link_to 'ログイン',new_user_session_path
     .top_image
       =image_tag 'Training club-logo (3).png', class: 'top-image'
       =image_tag 'undraw_fitness_tracker.png', class: 'right-image'
@@ -32,28 +32,14 @@
         毎日、簡単に積み上げ投稿ができます。
     .contents
       .contents-explanation
-        %h3 ランキング機能
-        %p
-        レベルが上位３名になると、ランキングに
-        %br
-        ユーザー名とレベルが載ります。
-        %br
-        ランキングに載ることで、モチベーション
-        %br
-        維持をサポート。
-      .contents-image
-      =image_tag 'undraw_exercise_registration.png'
-    .contents
-      .contents-image
-      =image_tag 'undraw_exercise_registration.png'
-      .contents-explanation
-        %h3 フォロー機能
-        %p 
-        誰かにフォローされる喜び｣をユーザーに
-        %br
-        も味わってもらい、 エクササイズに取り
-        %br
-        組む際のモチベーションアップへ。
+        .contents-follow
+          %h3 フォロー機能
+          %p
+          誰かにフォローされる喜びをユーザーにも味わってもらい、 エクササイズに取り
+          %br
+          組む際のモチベーションアップへ。
+      .contents-image-follow
+        =image_tag 'home_follow.jpg'
   .other-function
     %p その他、継続をサポートする仕組み
     .home-card 
@@ -65,15 +51,6 @@
         いねを押して、みんなでモチベーション
         %br
         を高めあうことができます
-    .home-card 
-      .card-explanation
-        %h4 Lvアップ機能
-        %p 
-        エクササイズの合計時間で、レベルが上
-        %br
-        がります。 レベルが高いほど、エクササ
-        %br
-        イズを積み上げている証明になります。
     .home-card 
       .card-explanation
         %h4 目標設定機能

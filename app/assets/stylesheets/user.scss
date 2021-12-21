@@ -158,3 +158,34 @@ padding: 10px;
 
 
 }
+
+//-----------------------------レスポンシブ-----------------------------//
+
+//-----------------------------スマホ表示-----------------------------//
+
+@media (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
+  .other-profile-card{
+    width: 70%;
+    
+  }
+  .dropdown {
+    position: relative;
+    right: 600px;
+
+  .dropdown-content {
+    font-size: 1px;
+    min-width: 120px;
+  }
+}
+  .profile-relation  {
+    font-size: 1px;
+    padding-left: 50px;
+
+    .profile-follow {
+      padding: 0;
+    }
+  }
+}
