@@ -4,6 +4,7 @@ class AccountsController < ApplicationController
       @articles = current_user.article.page(params[:page]).per(10)
       if @user == current_user
         redirect_to user_path
-    end
+      end
+      @articles = Article.all.page(params[:page]).per(10)
 end
 end

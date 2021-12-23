@@ -56,6 +56,11 @@ input, select {
     height: 100px;
     resize: none;
   }
+  .eyecatch {
+    display:block;
+   padding-left: 500px;
+   
+  }
 //-----------------------------レスポンシブ-----------------------------//
 
 //-----------------------------スマホ表示-----------------------------//
@@ -71,4 +76,10 @@ input, select {
     resize: none;
   }
 
+
+.eyecatch {
+  padding-top: 5px;
+  padding-left: 100px;
+  font-size: 10px;
+}
 }
