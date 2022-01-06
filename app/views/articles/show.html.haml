@@ -37,4 +37,4 @@
   .comment
     %div{id: "comment_area_#{@article.id}"}
       = render "comments/index", comments: @comments, article: @article
-      = render "comments/form", comment: @comment
+      = render partial: "comments/form", locals: {comment: @comment}

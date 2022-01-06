@@ -18,7 +18,7 @@ class User < ApplicationRecord
   has_many :followers, through: :reverse_of_relationships, source: :user
 
   validates :name, presence: true, length: { maximum: 30 }
-  validates :objective, presence: true, length: { maximum: 140 }
+  validates :objective, length: { maximum: 140 }
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, {presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }}
@@ -38,22 +38,23 @@ class User < ApplicationRecord
     self.followings.include?(other_user)
   end
 
-    def has_liked?(article)
-      likes.exists?(article_id: article.id)
-    end
+  def has_liked?(article)
+    likes.exists?(article_id: article.id)
+  end
 
-    def self.guest
-      find_or_create_by!(email: 'guest@example.com') do |user|
-        user.password = SecureRandom.urlsafe_base64
-        user.name = "ゲストユーザー"
-        user.objective = "毎日5分運動する"
-    end
+  def self.guest
+    find_or_create_by!(email: 'guest@example.com') do |user|
+    user.password = SecureRandom.urlsafe_base64
+    user.name = "ゲストユーザー"
+    user.objective = "毎日5分運動する"
+  end
 
-    def followings_count
-      followings.count
-    end
-    def followers_count
-      followers.count
-    end
+  def followings_count
+    followings.count
+  end
+
+  def followers_count
+    followers.count
+  end
   end
 end

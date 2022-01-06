@@ -7,10 +7,10 @@
     = form_for(current_user.relationships.build, remote: true) do |f|
       = f.hidden_field :follow_id, value: user.id
       = f.submit 'フォロー', class: 'follows'
-.profile-relation
-  .profile-follow
+.profile_relation
+  .profile_follow
     = link_to "フォロー：", followings_user_path(@user)
     %span #{@user.followings.count}人
-  .profile-follower
+  .profile_follower
     = link_to "フォロワー：", followers_user_path(@user)
     %span #{@user.followers.count}人
