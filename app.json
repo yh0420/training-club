@@ -1,0 +1,16 @@
+{
+    "name": "training club",
+    "description": "This is training-club",
+    "keywords": [],
+    "website": "",
+    "repository": "https://github.com/yh0420/training-club",
+    "env": {},
+    "addons": [
+      "heroku-postgresql:hobby-dev"
+    ],
+    "buildpacks": [{
+      "url": "heroku/nodejs"
+    }, {
+      "url": "heroku/ruby"
+    }]
+  }
