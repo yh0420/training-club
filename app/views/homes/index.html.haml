@@ -8,9 +8,9 @@
     .top_text
       %p 筋トレを継続したいあなたに
     .top_button
-      .button-guest
+      .button_guest
         = link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: "btn login-btn"
-      .button-signin
+      .button_signin
         = link_to '登録して始める', new_user_registration_path, class: 'login-btn'
   .description 
     %h3 TrainingClubとは
@@ -20,9 +20,9 @@
       積み上げを記録できるサービスです
   .function
     .contents
-      .contents-image
+      .contents_image
       =image_tag 'undraw_exercise_registration.png'
-      .contents-explanation
+      .contents_explanation
         %h3 事前に種目を登録
         %p
         継続したい種目を登録した後は
@@ -31,19 +31,19 @@
         %br
         毎日、簡単に積み上げ投稿ができます。
     .contents
-      .contents-explanation
-        .contents-follow
+      .contents_explanation
+        .contents_follow
           %h3 フォロー機能
           %p
           誰かにフォローされる喜びをユーザーにも味わってもらい、 エクササイズに取り
           %br
           組む際のモチベーションアップへ。
-      .contents-image-follow
+      .contents_image_follow
         =image_tag 'home_follow.jpg'
-  .other-function
+  .other_function
     %p その他、継続をサポートする仕組み
-    .home-card 
-      .card-explanation
+    .home_card 
+      .card_explanation
         %h4 いいね機能
         %p 
         毎日の積み上げ投稿に対して、い
@@ -51,8 +51,8 @@
         いねを押して、みんなでモチベーション
         %br
         を高めあうことができます
-    .home-card 
-      .card-explanation
+    .home_card 
+      .card_explanation
         %h4 目標設定機能
         %p 
         マイページで、目標を設定することがで
@@ -60,18 +60,18 @@
         きます。 目標を宣言することで、やる気
         %br
         アップにつながります。
-  .message-wrapper 
+  .message_wrapper 
     .message
       %h5.title
       = image_tag 'Training club-logo (3).png'
       をはじめよう!
       %p 登録は1分で完了します。
-    .button-guest
+    .button_guest
       = link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: "btn login-btn"
-    .button-signin
+    .button_signin
       = link_to '登録して始める', new_user_registration_path, class: 'login-btn'
   .footer 
-    .footer-title
+    .footer_title
     %p ©️ TrainingClub 2021
 
 

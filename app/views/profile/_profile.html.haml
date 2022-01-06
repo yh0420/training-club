@@ -1,16 +1,16 @@
-.other-profile-card
-  .other-profile-card__inner
-    .profile-thumb
+.profile_card
+  .profile_card__inner
+    .profile_thumb
       - if @user.avatar.attached?
         = image_tag @user.avatar,class: 'logo'
       -else 
         = image_tag 'default.png', class: 'logo'
-    .profile-content
-      .profile-name 
+    .profile_content
+      .profile_name 
         = @user.name 
       %div{class: "mypage-follow-contents-#{@user.id}"}
         = render 'relationships/relationship', user: @user
-      .profile-level
+      .profile_level
         = @user.level
-      .profile-obvective 
+      .profile_obvective 
         %p 目標： #{@user.objective}
