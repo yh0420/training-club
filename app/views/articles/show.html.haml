@@ -32,7 +32,7 @@
           %div{id: "likes_buttons_#{@article.id}"}
             = render partial: 'likes/like', locals: {article: @article}
         .card_comment 
-          = image_tag 'comment.png'
+          = image_tag 'comments.png'
           %span= @article.comment_count
   .comment
     %div{id: "comment_area_#{@article.id}"}
