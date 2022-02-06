@@ -9,6 +9,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    p "★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★"
     @article = Article.find(params[:id])
     @articles = Article.includes(:user, :likes, :comments).order(created_at: :desc)
     @comments = @article.comments.includes(:user).order(created_at: :desc)
@@ -44,7 +45,6 @@ class ArticlesController < ApplicationController
   end
   
   def destroy
-    p "★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★"
     article = current_user.article.find(params[:id])
     article.destroy!
     redirect_to root_path, notice: '削除に成功しました'
