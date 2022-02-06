@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    p "★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★"
+    p "★★★★★★★★★★★★★★★★★★★★★★あいうえお★★★★★★★★★★★★★★★★★★★★★★★★★★"
     @article = Article.find(params[:id])
     @articles = Article.includes(:user, :likes, :comments).order(created_at: :desc)
     @comments = @article.comments.includes(:user).order(created_at: :desc)
