@@ -26,7 +26,7 @@
                 = image_tag 'Combined Shape (1).png', class: 'article_dropbtn'
               .article_dropdown-content.mini
                 = link_to '編集する', edit_article_path(@article)
-                = link_to '削除する', article_path(@article), method: 'delete', data: {confirm: '本当に削除してもよろしいですか？'}
+                = button_to '削除する', article_path(@article), method: 'delete', data: {confirm: '本当に削除してもよろしいですか？'}
       .card_sub 
         .card_heart
           %div{id: "likes_buttons_#{@article.id}"}
