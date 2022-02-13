@@ -5,6 +5,7 @@ class RelationshipsController < ApplicationController
     
 
   def create
+    p session
     following = @follow_user.follow(@user)
     if following.save
       
