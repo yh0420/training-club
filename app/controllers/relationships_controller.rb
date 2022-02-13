@@ -1,6 +1,7 @@
 class RelationshipsController < ApplicationController
   protect_from_forgery
   before_action :set_user
+  before_action :authenticate_user!
     
 
   def create
