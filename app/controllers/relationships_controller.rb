@@ -4,7 +4,7 @@ class RelationshipsController < ApplicationController
     
 
   def create
-    following = current_user.follow(@user)
+    following = @follow_user.follow(@user)
     if following.save
       
     else
@@ -23,7 +23,8 @@ class RelationshipsController < ApplicationController
 
   private
     def set_user
-      @user = User.find(params[:relationship][:follow_id])
+    @user = User.find(params[:relationship][:follow_id])
+    @follow_user = current_user
     end
 end
 
