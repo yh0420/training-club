@@ -5,8 +5,8 @@ class RelationshipsController < ApplicationController
     
 
   def create
-    p current_user
-    following = @follow_user.follow(@user)
+    p @current_user
+    following = @current_user.follow(@user)
     if following.save
       
     else
