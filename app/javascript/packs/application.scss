@@ -13,15 +13,15 @@
  *= require_tree .
  *= require_self
  */
- /*@import 'header';
- @import 'home';
- @import 'user';
- @import 'form';
- @import 'training';
- @import 'button';
- @import 'flash';
- @import 'article';
- @import 'comment';*/
+ @import "module/header";
+ @import "module/home";
+ @import "module/user";
+ @import "module/form";
+ @import "module/training";
+ @import "module/button";
+ @import "module/flash";
+ @import "module/article";
+ @import "module/comment";
 
  $text-base-color: #616161;
 

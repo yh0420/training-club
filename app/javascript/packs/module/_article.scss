@@ -1,0 +1,154 @@
+$avatar-size: 45px;
+$heart-size: 20px;
+$comment-size: 22px;
+$container-padding: 16px;
+$article-image: 10px;
+
+
+
+.card {
+   background-color:#fff;
+   width: 500px;
+   padding: 10px;
+   margin: auto;
+   top:30px;
+   border :1px solid #c0c0c0;
+   margin-top: 30px;
+   border-radius: 1rem;
+   position: relative;
+}
+.card_image { 
+    width: $avatar-size;
+    height: $avatar-size;
+    border-radius: 100%;
+    top: 23px;
+    left:10px
+}
+.article_image {
+  img {
+    position: relative;
+    top: 150px;
+    left: 250px;
+    padding:20px;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 70%;
+    padding-top: 40px;
+    }
+
+   }
+   .card_name{
+       padding-left: 80px;
+       position: relative;
+       bottom:60px;
+       right:20px;      
+   }
+
+.card_heart {
+  padding-left: 350px;
+    img {
+        width: $heart-size;
+        height: $heart-size;
+    }
+}
+.card_create {
+  opacity: 0.8;
+  font-size: 10px;
+}
+.card_sub {
+  display: flex;
+  padding-left:50px;
+}
+
+.card_comment {
+  padding-left:10px;
+ 
+    img{
+    height: $comment-size;
+    width: $comment-size;
+    }
+}
+
+.post {
+  text-align: center;
+  margin: 50px;
+}
+
+.article_dropdown {
+  position: absolute;
+  right: 50px;
+  top: 0;
+  display: inline-block;
+  margin-left: 850px;
+  cursor: pointer;
+}
+  
+.article_dropdown-content {
+  font-weight: normal;
+  display: none;
+  left: 200;
+  position:absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 10px 10px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  cursor: pointer;
+
+  &.mini {
+      min-width: 100px;
+  }
+}
+  
+.article_dropdown-content a {
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+
+}
+  
+.article_dropdown-content a:hover {
+  background-color: white;
+}
+
+.article_dropdown:hover .article_dropdown-content {
+  display: block;
+}
+.card_delete {
+  position:absolute;
+  bottom: 10px;
+  left: 440px;
+}
+
+//-----------------------------レスポンシブ-----------------------------//
+
+//-----------------------------スマホ表示-----------------------------//
+
+@media (max-width: 767px) {
+.card {
+  width: 70%;
+  .card_sub {
+    .card_heart {
+      padding-left: 110px;
+    }
+    .card_comment {
+      padding-left: 5px;
+    }
+  }
+  .card_delete {
+    left: 230px;
+  }
+  .article_image {
+    img {
+      position: relative;
+      left: 130px;
+      width: 70%;
+      top: 70px
+    }
+  }
+}
+  
+  
+
+}

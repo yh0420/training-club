@@ -1,0 +1,41 @@
+.training_card {
+  display:flex;
+  box-shadow: 4px 4px 6px #ccc;
+  justify-content: space-between;
+  margin: 50px 250px;
+    
+    .training_name {
+      padding-left: 50px;
+    }
+
+    .training_button {
+      font-size: 20px;
+      padding-top: 15px;
+      padding-right: 10px;
+    }
+}
+
+//-----------------------------レスポンシブ-----------------------------//
+
+//-----------------------------スマホ表示-----------------------------//
+
+@media (max-width: 767px) {
+    .training_card {
+      width: 70%;
+      height: auto;
+      margin: 50px 50px;
+     a {
+        padding: 5px;
+        }
+
+    .training_button {
+      font-size: 1px;
+    }
+    .training_name {
+      padding-left: 50px;
+      inline-size: 150px;
+      overflow-wrap: break-word;
+      height: auto;
+    }
+  }
+}

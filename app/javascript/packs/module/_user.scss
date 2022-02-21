@@ -1,0 +1,174 @@
+$avatar-size: 120px;
+
+.dropdown {
+    position: relative;
+    bottom: 150px;
+    display: inline-block;
+    margin-left: 850px;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    font-weight: normal;
+    display: none;
+    left: 200;
+    position:absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 10px 10px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    cursor: pointer;
+
+    &.mini {
+        min-width: 170px;
+    }
+  }
+  
+  .dropdown-content a {
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+
+  }
+  
+  .dropdown-content a:hover {
+    background-color: white;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+.logo{
+  width: $avatar-size;
+  height: $avatar-size;
+  border-radius: 100%;
+  margin : 0 auto;
+  display: block;
+}
+.my_post {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 200px;
+}
+.profile_card{
+  width: 100%;
+  max-width:500px;
+  position: relative;
+  background: #fff; /*背景の色*/
+  box-shadow: 0px 1px 3px rgba(0,0,0,.18);
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.profile_card:before{
+  width:120%;
+  height:100px;
+  content:"";
+  transform:skew(15deg,10deg);
+  background: #F16821; /*斜め背景の色*/
+  position:  absolute;
+  top:-15%;
+  left:-10%;
+  z-index: 0;
+}
+
+.profile_card__inner{
+ position: relative;
+}
+
+.profile_thumb{
+  overflow: hidden;
+  width: 110px;
+  height: 110px;
+  border: #fff 3px solid;
+  border-radius: 55px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  background: #fff;
+}
+
+.profile_thumb img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.profile_content{
+  text-align: center;
+}
+
+.profile_content span{
+  display: block;
+}
+
+.profile_name{
+  margin-bottom: 3px;
+  font-weight: bold;
+  text-align: center;
+  
+}
+
+.profile_level{
+  margin-bottom: 10px;
+  color: #ccc;
+  font-size: 10px;
+  text-align: center;
+}
+
+.profile_intro{
+  font-size: 12px;
+}
+.profile_relation p {
+  display: inline-block;
+
+}
+.profile_follower {
+  padding-left: 20px;
+  display: flex;
+  
+}
+.profile_follow {
+  padding-left: 120px;
+  display: flex;
+  
+}
+.profile_relation {
+  display: flex;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+//-----------------------------レスポンシブ-----------------------------//
+
+//-----------------------------スマホ表示-----------------------------//
+
+@media (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
+  .profile_card{
+    width: 70%;
+    
+  }
+  .dropdown {
+    position: relative;
+    right: 600px;
+
+  .dropdown_content {
+    font-size: 1px;
+    min-width: 120px;
+  }
+}
+  .profile_relation  {
+    font-size: 1px;
+    padding-left: 50px;
+
+    .profile_follow {
+      padding: 0;
+    }
+  }
+}

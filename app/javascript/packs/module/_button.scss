@@ -1,0 +1,123 @@
+@import './variables'; 
+
+.btn-primary {
+    border-color: #F16821;
+    background-color:white;
+    border: 1px solid;
+    text-align: center;
+    color: #F16821;
+    margin: 10px;
+    font-weight: 400px;
+    padding: 15px 20px;
+    border-radius: 50rem;
+    width: 50%;
+    transition: color 0.15s;
+    margin-left: 300px;
+    display:block;
+    margin:0 auto;
+  }
+
+  .btn-secondary {
+    background-color: white;
+    border: solid 1px $primary-color;
+    width: 100%;
+    text-align: center;
+    color: $primary-color;
+    padding: 16px 0;
+    font-weight: bold;
+  }
+
+  .btn-trainings {
+    border-color: #F16821;
+    background-color:white;
+    border: 1px solid;
+    text-align: center;
+    color: #F16821;
+    margin: 20px;
+    font-weight: 400px;
+    padding: 15px 20px;
+    border-radius: 50rem;
+    width: 20%;
+    transition: color 0.15s;
+    margin-left: 550px;
+    margin-top:50px;
+  }
+
+  .btn-index-trainings {
+    display: block;
+    border-color: #F16821;
+    background-color:white;
+    border: 1px solid;
+    text-align: center;
+    color: #F16821;
+    margin: 20px;
+    font-weight: 400px;
+    padding: 25px 65px;
+    border-radius: 50rem;
+    width: 20%;
+    transition: color 0.15s;
+    margin-left: 500px;
+    margin-top: 100px;
+  }
+
+  .btn.btn-secondary {
+    background-color: #1A3263;
+    border-color: #1A3263;
+    border-radius: 100%;
+    width: 30px;
+    padding: 8px;
+  }
+
+  .follows {
+    background-color:white;
+    border: 1px solid;
+    text-align: center;
+    margin: 2px;
+    font-weight: 200px;
+    padding: 5px 10px;
+    border-radius: 10rem;
+    width: 50%;
+    transition: color 0.15s;
+    color: #fff;
+    background-color: #eb6100;
+    cursor: pointer;
+  }
+
+  .follows:hover  {
+    color: #fff;
+   background: #f56500;
+   cursor: pointer;
+}
+
+.center-btn {
+  display:block;
+  margin:0 auto;
+  background-color: white;
+  border: solid 1px #f56500;;
+  width: 30%;
+  text-align: center;
+  color: #F16821;
+  padding: 16px 0;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 10rem;
+}
+//-----------------------------レスポンシブ-----------------------------//
+
+//-----------------------------スマホ表示-----------------------------//
+@media (max-width: 767px) {
+
+  .btn-index-trainings {
+   font-size: 10px;
+  margin-left: 80px;
+  }
+
+  .btn-trainings {
+   margin: 0 auto;
+   margin: 40px 150px;
+  }
+
+
+
+}

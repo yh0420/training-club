@@ -1,0 +1,84 @@
+input, select {
+    &.text {
+      width: 100%;
+      margin: 8px 0px;
+      padding: 16px 24px;
+      border: 1px solid #EBEBEB;
+    }
+  }
+  
+  label {
+    font-size: 12px;
+    text-align: center;
+    display:block;
+    margin:0 auto;
+    font-size:20px;
+  }
+  .form-content {
+    width:50%;
+    height: 200px;
+    resize: none;
+  }
+
+  .training_form {
+    display: block;
+    width: 50%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin-left: 320px ;
+    margin-top:250px;
+  }
+  .form-control {
+    display:block;
+    margin:0 auto;
+    width:30%;
+    height: 20px;
+    border-radius: 5px;
+  }
+  .form-content {
+    display:block;
+    margin:0 auto;
+    width:30%;
+    height: 300px;
+    border-radius: 5px;
+  }
+  .comment-form-content {
+    width:50%;
+    height: 100px;
+    resize: none;
+  }
+  .eyecatch {
+    display:block;
+   padding-left: 500px;
+   
+  }
+//-----------------------------レスポンシブ-----------------------------//
+
+//-----------------------------スマホ表示-----------------------------//
+
+@media (max-width: 767px) {
+  .training_form {
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  .comment-form-content {
+    width:90%;
+    height: 70px;
+    resize: none;
+  }
+  
+.eyecatch {
+  padding-top: 5px;
+  padding-left: 100px;
+  font-size: 10px;
+}
+}
