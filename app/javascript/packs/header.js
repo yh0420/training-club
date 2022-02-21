@@ -1,4 +1,4 @@
-document.addEventListener('turbolinks:load', function () {
+//document.addEventListener('turbolinks:load', function () {
   $(function() {
     $(".nav-button").on("click", function() {
       if ($(this).hasClass("active")) {
@@ -14,4 +14,4 @@ document.addEventListener('turbolinks:load', function () {
       }
     });
   });
-});
+//});
