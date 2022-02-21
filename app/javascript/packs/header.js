@@ -1,5 +1,5 @@
-document.addEventListener("turbolinks:load", function () {
-$(function() {
+document.addEventListener('turbolinks:load', function () {
+  $(function() {
     $(".nav-button").on("click", function() {
       if ($(this).hasClass("active")) {
         $(this).removeClass("active");
@@ -13,5 +13,5 @@ $(function() {
           .removeClass("close");
       }
     });
-   });
   });
+});
