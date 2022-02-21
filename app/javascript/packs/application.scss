@@ -1,0 +1,80 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import 'header';
+ @import 'home';
+ @import 'user';
+ @import 'form';
+ @import 'training';
+ @import 'button';
+ @import 'flash';
+ @import 'article';
+ @import 'comment';
+
+ $text-base-color: #616161;
+
+ html {
+    word-spacing: 1px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0px; padding: 0px
+  }
+body {
+   
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0px; padding: 0px
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.pagination{
+  margin: 20px auto 0;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  span{
+      text-align: center;
+      width: 50px;
+      :hover{
+          background-color:#f3f3f3;
+      }
+      a{
+          display: block;
+          width: 100%;
+          height: 100%;
+          :hover{
+              background-color: #f3f3f3;
+            }
+      }
+  }
+}
+
+.current{
+  color: #008CFF;
+}
+
+.gap{
+  background-color: white !important;
+}
+.container {
+  overflow-x: hidden;
+}
