@@ -1,12 +1,12 @@
 class RelationshipsController < ApplicationController
   protect_from_forgery
   before_action :set_user
-  
-    
+  before_action :current_user
+
 
   def create
-    p @current_user
-    following = @current_user.follow(@user)
+    p current_user
+    following = current_user.follow(@user)
     if following.save
       
     else
