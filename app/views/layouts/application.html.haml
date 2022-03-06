@@ -34,7 +34,7 @@
                 = link_to 'みんなのTraining', articles_path
             %li.nav-item-active    
               %i.fas.fa-sign-out-alt
-                = link_to 'ログアウト', destroy_user_session_path(id: current_user.id), data: { method: 'delete' }
+                = link_to 'ログアウト', root_path, data: { method: 'delete' }
     - if flash.present?
       .flash
         - flash.each do |key, value|
