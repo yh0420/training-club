@@ -11,6 +11,7 @@ class RelationshipsController < ApplicationController
       unless following.save
         flash.now[:alert] = 'ユーザーのフォローに失敗しました'
       end
+      format.html { redirect_to controller: :accounts, action: :show, id: @user.id }
       format.js
     end
   end
