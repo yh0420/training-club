@@ -7,10 +7,11 @@ class RelationshipsController < ApplicationController
   def create
     p session
     following = current_user.follow(@user)
-    if following.save
-      
-    else
-      flash.now[:alert] = 'ユーザーのフォローに失敗しました'
+    respond_to do |format|
+      unless following.save
+        flash.now[:alert] = 'ユーザーのフォローに失敗しました'
+      end
+      format.js
     end
   end
 
