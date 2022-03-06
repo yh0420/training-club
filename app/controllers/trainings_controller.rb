@@ -2,6 +2,8 @@ class TrainingsController < ApplicationController
   before_action :set_training, only: %i[edit update destroy]
 
   def index
+    p "training(index)"
+    p session
     @trainings = current_user.trainings.order(id: :asc)
   end
 
