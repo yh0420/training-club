@@ -5,8 +5,7 @@ class RelationshipsController < ApplicationController
   helper_method :current_user
  
   def create
-    p user_signed_in?
-    p current_user
+    p current_user.id
     following = current_user.follow(@user)
     if following.save
       
