@@ -1,7 +1,5 @@
 class AccountsController < ApplicationController
   def show
-    p "accounts(show)"
-    p session
     @user = User.find(params[:id])
     @articles = current_user.article.page(params[:page]).per(10)
     if @user == current_user

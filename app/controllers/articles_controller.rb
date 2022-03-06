@@ -3,15 +3,12 @@ class ArticlesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   
   def index
-    p "article(index)"
-    p session
     @articles = Article.includes(:user, :likes, :comments).order(created_at: :desc)
     @articles = Article.all.page(params[:page]).per(10)
     @training = Training.includes(:name)
   end
 
   def show
-    p "★★★★★★★★★★★★★★★★★★★★★★あいうえお★★★★★★★★★★★★★★★★★★★★★★★★★★"
     @article = Article.find(params[:id])
     @articles = Article.includes(:user, :likes, :comments).order(created_at: :desc)
     @comments = @article.comments.includes(:user).order(created_at: :desc)
