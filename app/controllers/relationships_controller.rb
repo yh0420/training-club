@@ -1,5 +1,5 @@
 class RelationshipsController < ApplicationController
-  protect_from_forgery
+  skip_forgery_protection
   before_action :set_user
   before_action :user_signed_in?
   helper_method :current_user
