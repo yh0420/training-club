@@ -1,11 +1,8 @@
 class RelationshipsController < ApplicationController
   skip_forgery_protection
   before_action :set_user
-  before_action :user_signed_in?
-  helper_method :current_user
  
   def create
-    p session
     following = current_user.follow(@user)
     respond_to do |format|
       unless following.save
@@ -18,10 +15,12 @@ class RelationshipsController < ApplicationController
 
   def destroy
     following = current_user.unfollow(@user)
-    if following.destroy
-      
-    else
-      flash.now[:alert] = "ユーザーのフォロー解除に失敗しました"
+    respond_to do |format|
+      unless following.destroy
+        flash.now[:alert] = 'ユーザーのフォロー解除に失敗しました'
+      end
+      format.html { redirect_to controller: :accounts, action: :show, id: @user.id }
+      format.js
     end
   end
 
