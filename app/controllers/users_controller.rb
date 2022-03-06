@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
     before_action :set_user, only: [:followings, :followers]
   def show
+    p request.referer
     @user = User.find(params[:id])
     @articles = current_user.article.page(params[:page]).per(10)
   end
