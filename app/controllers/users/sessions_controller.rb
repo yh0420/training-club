@@ -1,7 +1,7 @@
 class Users::SessionsController < Devise::SessionsController
   def guest_sign_in
     
-    user = User.find(28)  #ゲストユーザー（id:28）にログインさせている
+    user = User.find(1)  #ゲストユーザー（id:28）にログインさせている
     user.update(email: 'guest@example.com',name: 'ゲストユーザー') do |user|
     user.password = SecureRandom.urlsafe_base64
   end
