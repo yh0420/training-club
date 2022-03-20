@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments, only: [:create, :destroy]
 
-    resource :like, only: [:create, :destroy]
+    resource :like, only: [:create, :destroy, :show]
     get '/like', to: 'likes#create', format: "html"
   end
   resources :users, only: [:show] do
