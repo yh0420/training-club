@@ -6,11 +6,10 @@ class LikesController < ApplicationController
     end
 
       def create
-        current_user.likes.create!(article_id: params[:article_id])
         if current_user.likes.create!(article_id: params[:article_id])
           respond_to do |format|
             format.any
-            format.html { redirect_to controller: :likes, action: :index}
+            format.html { redirect_to article_like_path }
             format.js
           end
         end
