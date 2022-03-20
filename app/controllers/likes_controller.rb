@@ -25,6 +25,13 @@ class LikesController < ApplicationController
 
   def destroy
     current_user.likes.find_by(article_id: params[:article_id]).destroy!
+    #if current_user.likes.find_by(article_id: params[:article_id]).destroy!
+      #respond_to do |format|
+        #format.any
+        #format.html { redirect_to controller: :articles, action: :show, id: params[:article_id] }
+        #format.js
+      #end
+    #end
     @article = Article.find(params[:article_id])
   end
 
