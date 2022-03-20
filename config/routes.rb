@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:create, :destroy]
 
     resource :like, only: [:create, :destroy]
-    get '/:article_id/like', to: 'likes#create'
+    get '/like', to: 'likes#create'
   end
   resources :users, only: [:show] do
     member do
