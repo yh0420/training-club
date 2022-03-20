@@ -5,15 +5,11 @@ class LikesController < ApplicationController
       @articles = current_user.favorite_articles
     end
 
-    def show 
-      @article = Article.find(params[:article_id])
-    end
-
     def create
       if current_user.likes.create!(article_id: params[:article_id])
         respond_to do |format|
           format.any
-          format.html { redirect_to controller: :likes, action: :show, article_id: params[:article_id]}
+          format.html { redirect_to controller: :articles, action: :show, id: params[:article_id] }
           format.js
         end
       end
