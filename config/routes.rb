@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     delete '/', to: 'devise/sessions#destroy'
   end
   root to: 'homes#index'
+  post '/', to: 'homes#index'
   resources :trainings
   resources :articles do
     resources :comments, only: [:create, :destroy]
