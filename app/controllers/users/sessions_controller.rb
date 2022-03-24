@@ -4,6 +4,8 @@ class Users::SessionsController < Devise::SessionsController
     user.update(email: 'guest@example.com', name: 'ゲストユーザー') do |u|
       u.password = SecureRandom.urlsafe_base64
     end
+    p "★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★"
+    p "ゲストサインイン"
     sign_in user #ユーザーにログインさせる
     #redirect_to user_path(id: current_user.id)
     redirect_to root_path
