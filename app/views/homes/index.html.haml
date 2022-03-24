@@ -9,7 +9,7 @@
       %p 筋トレを継続したいあなたに
     .top_button
       .button_guest
-        = link_to 'ゲストログイン', users_guest_sign_in_path(@user, params:{id:1}), method: :post, class: "btn login-btn"
+        = link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: "btn login-btn"
       .button_signin
         = link_to '登録して始める', new_user_registration_path, class: 'login-btn'
   .description 
