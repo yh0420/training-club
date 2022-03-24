@@ -2,7 +2,11 @@ class UsersController < ApplicationController
     before_action :set_user, only: [:followings, :followers]
   def show
     p Rails.application.routes.recognize_path(request.referer)
-    @user = User.find(params[:id])
+    if params[:id].present?
+      @user = User.find(params[:id])
+    else
+      @user = User.find(1)
+    end
     @articles = current_user.article.page(params[:page]).per(10)
   end
 
