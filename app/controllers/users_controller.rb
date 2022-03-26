@@ -7,7 +7,11 @@ class UsersController < ApplicationController
     else
       @user = User.find(1)
     end
-    @articles = current_user.article.page(params[:page]).per(10)
+    if @current_user.present?
+      @articles = @current_user.article.page(params[:page]).per(10)
+    else 
+      @articles = current_user.article.page(params[:page]).per(10)
+    end
   end
 
   def followings
