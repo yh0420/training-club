@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
     before_action :set_user, only: [:followings, :followers]
-    before_action :set_current_user
+    #before_action :set_current_user
 
   def show
     p Rails.application.routes.recognize_path(request.referer)
@@ -9,12 +9,7 @@ class UsersController < ApplicationController
     else
       @user = User.find(1)
     end
-    if @current_user.present?
-      current_user = @current_user
-      @articles = @current_user.article.page(params[:page]).per(10)
-    else 
       @articles = current_user.article.page(params[:page]).per(10)
-    end
   end
 
   def followings
@@ -38,8 +33,8 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
     end
 
-    def set_current_user
-      p "current_user"
-      @current_user = User.find_by(id: session[:user_id])
-    end
+    #def set_current_user
+     # p "current_user"
+      #@current_user = User.find_by(id: session[:user_id])
+    #end
 end
