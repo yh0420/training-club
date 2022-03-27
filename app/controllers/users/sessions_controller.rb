@@ -6,6 +6,7 @@ class Users::SessionsController < ApplicationController
     end
     p "★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★"
     p "guest_sign_in"
+    p current_user
     sign_in user #ユーザーにログインさせる
     #redirect_to user_path(id: current_user.id)
     redirect_to root_path
