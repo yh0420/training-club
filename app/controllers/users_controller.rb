@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
     before_action :set_user, only: [:followings, :followers]
+    before_action :set_current_user
+
   def show
     p Rails.application.routes.recognize_path(request.referer)
     if params[:id] != "guest_sign_in"
@@ -8,9 +10,10 @@ class UsersController < ApplicationController
       @user = User.find(1)
     end
     if @current_user.present?
+      current_user = @current_user
       @articles = @current_user.article.page(params[:page]).per(10)
     else 
-      @articles = User.find(1).article.page(params[:page]).per(10)
+      @articles = current_user.article.page(params[:page]).per(10)
     end
   end
 
@@ -33,5 +36,10 @@ class UsersController < ApplicationController
   private
     def set_user
       @user = User.find(params[:id])
+    end
+
+    def set_current_user
+      p "current_user"
+      @current_user = User.find_by(id: session[:user_id])
     end
 end
