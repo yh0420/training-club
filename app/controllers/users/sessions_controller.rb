@@ -1,4 +1,4 @@
-class Users::SessionsController < Devise::SessionsController
+class Users::SessionsController < ApplicationController
   def guest_sign_in
     user = User.find(1)  #ゲストユーザー（id:28）にログインさせている
     user.update(email: 'guest@example.com', name: 'ゲストユーザー') do |u|
