@@ -4,6 +4,8 @@ class UsersController < ApplicationController
 
   def show
     p Rails.application.routes.recognize_path(request.referer)
+    p "session"
+    p session
     if params[:id] != "guest_sign_in"
       @user = User.find(params[:id])
     else
