@@ -5,7 +5,7 @@ class Users::SessionsController < Devise::SessionsController
       u.password = SecureRandom.urlsafe_base64
     end
     p "★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★"
-    p "ゲストサインイン"
+    p "guest_sign_in"
     sign_in user #ユーザーにログインさせる
     #redirect_to user_path(id: current_user.id)
     redirect_to root_path
