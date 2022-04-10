@@ -7,6 +7,10 @@ class LikesController < ApplicationController
 
     def create
       if current_user.likes.create!(article_id: params[:article_id])
+        @article = Article.find(params[:article_id])
+        @articles = Article.includes(:user, :likes, :comments).order(created_at: :desc)
+        @comments = @article.comments.includes(:user).order(created_at: :desc)
+        @comment = Comment.new
         respond_to do |format|
           format.js render template: "articles/show" 
           #format.html { redirect_to controller: :articles, action: :show, id: params[:article_id] }
