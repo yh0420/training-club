@@ -15,6 +15,7 @@ class LikesController < ApplicationController
         respond_to do |format|
           format.js { render "articles/show" } 
           #format.html { redirect_to controller: :articles, action: :show, id: params[:article_id] }
+          format.html { render "articles/show" }
           format.any
         end
       end
