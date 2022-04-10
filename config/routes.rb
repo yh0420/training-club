@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:create, :destroy]
 
     resource :like, only: [:create, :destroy]
-    get '/like', to: 'likes#create', format: "html"
+    get '/like', to: 'likes#create', format: "js"
   end
   resources :users, only: [:show] do
     member do
