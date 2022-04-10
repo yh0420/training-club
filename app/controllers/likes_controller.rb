@@ -9,7 +9,7 @@ class LikesController < ApplicationController
       if current_user.likes.create!(article_id: params[:article_id])
         respond_to do |format|
           format.js
-          format.html { redirect_to controller: :articles, action: :show, id: params[:article_id] }
+          #format.html { redirect_to controller: :articles, action: :show, id: params[:article_id] }
           format.any
         end
       end
