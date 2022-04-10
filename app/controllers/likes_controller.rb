@@ -1,5 +1,6 @@
 class LikesController < ApplicationController
     before_action :authenticate_user!
+    protect_from_forgery except: :create
    
     def index
       @articles = current_user.favorite_articles
