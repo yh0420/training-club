@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
     resource :like, only: [:create, :destroy]
     get '/like', to: 'likes#create'#, format: "js"
+    get '/', to: 'likes#create'#, format: "js"
+    
   end
   resources :users, only: [:show] do
     member do
