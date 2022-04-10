@@ -12,7 +12,7 @@ class LikesController < ApplicationController
         @comments = @article.comments.includes(:user).order(created_at: :desc)
         @comment = Comment.new
         respond_to do |format|
-          format.js render template: "articles/show" 
+          format.js render template "articles/show" 
           #format.html { redirect_to controller: :articles, action: :show, id: params[:article_id] }
           format.any
         end
