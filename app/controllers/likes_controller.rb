@@ -10,7 +10,7 @@ class LikesController < ApplicationController
       #@articles = Article.includes(:user, :likes, :comments).order(created_at: :desc)
       #@comments = @article.comments.includes(:user).order(created_at: :desc)
       #@comment = Comment.new
-      if params[:article_id].present?
+      if params[:article_id].to_i != 0
         if current_user.likes.create!(article_id: params[:article_id])
           respond_to do |format|
             format.js
