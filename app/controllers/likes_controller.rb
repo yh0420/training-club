@@ -6,11 +6,17 @@ class LikesController < ApplicationController
     end
 
     def create
-      if current_user.likes.create!(article_id: params[:article_id])
-        respond_to do |format|
-          format.js
-          format.html { redirect_to controller: :articles, action: :show, id: params[:article_id] }
-          format.any
+      #@article = Article.find(params[:id])
+      #@articles = Article.includes(:user, :likes, :comments).order(created_at: :desc)
+      #@comments = @article.comments.includes(:user).order(created_at: :desc)
+      #@comment = Comment.new
+      if params[:article_id].present?
+        if current_user.likes.create!(article_id: params[:article_id])
+          respond_to do |format|
+            format.js
+            format.html { redirect_to controller: :articles, action: :show, id: params[:article_id] }
+            format.any
+          end
         end
       end
       #@article = Article.find(params[:article_id])
