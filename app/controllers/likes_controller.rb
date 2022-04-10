@@ -1,26 +1,18 @@
 class LikesController < ApplicationController
     before_action :authenticate_user!
-    protect_from_forgery except: :create
    
     def index
       @articles = current_user.favorite_articles
     end
 
     def create
-
-      #if current_user.likes.create!(article_id: params[:article_id])
-       # @article = Article.find(params[:article_id])
-        #@articles = Article.includes(:user, :likes, :comments).order(created_at: :desc)
-        #@comments = @article.comments.includes(:user).order(created_at: :desc)
-        #@comment = Comment.new
-        #respond_to do |format|
-          #format.html { render "articles/show" }
-          #format.js { render "articles/show" }
-          #format.html { redirect_to controller: :articles, action: :show, id: params[:article_id] }
-          #format.any
-        #end
-      #end
-
+      if current_user.likes.create!(article_id: params[:article_id])
+        respond_to do |format|
+          format.js
+          format.html { redirect_to controller: :articles, action: :show, id: params[:article_id] }
+          format.any
+        end
+      end
       #@article = Article.find(params[:article_id])
       #respond_to do |format|
       # unless following.save
