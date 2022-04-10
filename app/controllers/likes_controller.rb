@@ -8,9 +8,9 @@ class LikesController < ApplicationController
     def create
       if current_user.likes.create!(article_id: params[:article_id])
         respond_to do |format|
-          format.any
-          format.html { redirect_to controller: :articles, action: :show, id: params[:article_id] }
           format.js
+          format.html { redirect_to controller: :articles, action: :show, id: params[:article_id] }
+          format.any
         end
       end
       #@article = Article.find(params[:article_id])
