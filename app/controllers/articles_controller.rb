@@ -49,16 +49,6 @@ class ArticlesController < ApplicationController
     redirect_to root_path, notice: '削除に成功しました'
   end
 
-  def likes_create
-    if current_user.likes.create!(article_id: params[:article_id])
-      respond_to do |format|
-        format.js
-        format.html
-        format.any
-      end
-    end
-  end
-
   private
     def article_params
       params.require(:article).permit(:day, :minutes, :body, :training, :user_id, :comments, :name, :eyecatch)
